@@ -1,11 +1,21 @@
 #include <stdio.h>
-#include <conio.h>
+#include <curses.h>
 
-int main() {
-    char input;
-    while (1) {
-        input = _getch();
-        if (input == 'q') break;
-    }
-    return 0;
+void run();
+
+int main(int argc, char* argv[]) {
+	initscr();
+	noecho();
+	cbreak();
+	run();
+	endwin();
+	return 0;
+}
+
+void run() {
+	char input = '\0';
+	while (1) {
+		input = getch();
+		if (input == 'q') break;
+	}
 }
