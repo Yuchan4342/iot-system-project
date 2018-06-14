@@ -1,5 +1,5 @@
-# iot-system-project
-2018年春学期授業「IoTシステム設計」の制作システム
+# このRepositoryの概要
+2018年春学期授業「IoTシステム設計」の制作システム  
 This is a project in class, IoT System Design on Spring Semester in 2018
 
 # 役割
