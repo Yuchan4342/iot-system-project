@@ -3,7 +3,7 @@ TARGET = main
 #
 CROSS_COMPILE = arm-linux-gnueabihf-
 CFLAGS = -Dsoc_cv_av -g -Wall  -I ${SOCEDS_DEST_ROOT}/ip/altera/hps/altera_hps/hwlib/include
-LDFLAGS =  -g -Wall -lcurses
+LDFLAGS =  -g -Wall
 CC = $(CROSS_COMPILE)gcc
 ARCH= arm
 
