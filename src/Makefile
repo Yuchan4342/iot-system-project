@@ -9,7 +9,7 @@ ARCH= arm
 build: $(TARGET)
 
 $(TARGET): main.o
-	$(CC) $(LDFLAGS) $^ -o $@ -lcurses
+	$(CC) $(LDFLAGS) $^ -o $@
 
 %.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
