@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <termios.h>
 #include <fcntl.h>
-#include <sys/ioctl.h>
+#include <string.h>
 
 #define FLASH_NUM 10
 #define SLEEP_TIME 1000
@@ -37,13 +38,32 @@ void sendPattern() {
 void run() {
 	printf("Game Start!\n");
 	int i = 0;
-	int fd = open("/dev/ttys000", O_RDWR | O_NONBLOCK);
-	if (fd < 0) return;
+	char rt = '\n';
+	char keys[9] = "asdfjkl;";
+	struct termios term_attr;
+	tcgetattr(0, &term_attr);
+  term_attr.c_lflag &= ~(ICANON|ECHO);
+  term_attr.c_cc[VMIN] = 8;
+  term_attr.c_cc[VTIME] = 0;
+  tcsetattr(0, TCSANOW, &term_attr);
+  fcntl(0, F_SETFL, O_NONBLOCK);
+  char bits[256];
+  char c[8];
+  
 	while (i < 10000) {
 		// 送信
 		// printf("Send %d\n", i);
+		memset(bits, '0', sizeof(bits));
+		read(0, &c, 8);
+		int j;
+		for (j = 0; j < 8; j++) {
+			bits[c[j] - ';'] = '1';
+		}
+		for (j = 0; j < 8; j++) {
+			write(0, &bits[keys[j] - ';'], 1);
+		}
+		write(0, &rt, 1);
 		i++;
-		usleep(SLEEP_TIME);
+		usleep(SLEEP_TIME * 100);
 	}
-	close(fd);
 }
