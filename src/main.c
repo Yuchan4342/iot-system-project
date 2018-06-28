@@ -32,6 +32,8 @@ void sendPattern() {
 		// タイムスタンプは上24bitに代入
 		pattern[i] += timestamp[i] * 256;
 	}
+	// ボードに送信するコードはここに
+
 }
 
 // ゲーム本番
@@ -63,6 +65,8 @@ void run() {
 			write(0, &bits[keys[j] - ';'], 1);
 		}
 		write(0, &rt, 1);
+		// ボードに送信するコードはここに
+		
 		i++;
 		usleep(SLEEP_TIME * 100);
 	}
