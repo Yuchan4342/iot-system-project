@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <fcntl.h>
+#include <sys/ioctl.h>
 
 #define FLASH_NUM 10
 #define SLEEP_TIME 1000
@@ -35,9 +37,13 @@ void sendPattern() {
 void run() {
 	printf("Game Start!\n");
 	int i = 0;
-	while (1) {
+	int fd = open("/dev/ttys000", O_RDWR | O_NONBLOCK);
+	if (fd < 0) return;
+	while (i < 10000) {
 		// 送信
-		printf("Send %d\n", i++);
+		// printf("Send %d\n", i);
+		i++;
 		usleep(SLEEP_TIME);
 	}
+	close(fd);
 }
