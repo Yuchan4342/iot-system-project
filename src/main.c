@@ -7,7 +7,7 @@ void sendPattern();
 
 int main(int argc, char* argv[]) {
 	sendPattern();
-	run();
+	runGame();
 	return 0;
 }
 
@@ -18,7 +18,7 @@ void sendPattern() {
 }
 
 // ゲーム本番
-void run() {
+void runGame() {
 	printf("Game Start!\n");
 	int i = 0;
 	while (1) {
