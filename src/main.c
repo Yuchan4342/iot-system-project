@@ -4,10 +4,11 @@
 #define SLEEP_TIME 1000
 
 void sendPattern();
+void run();
 
 int main(int argc, char* argv[]) {
 	sendPattern();
-	runGame();
+	run();
 	return 0;
 }
 
@@ -18,7 +19,7 @@ void sendPattern() {
 }
 
 // ゲーム本番
-void runGame() {
+void run() {
 	printf("Game Start!\n");
 	int i = 0;
 	while (1) {
