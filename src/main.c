@@ -24,6 +24,6 @@ void run() {
 	while (1) {
 		// 送信
 		printf("Send i\n", i++);
-		usleep(SLEEP_TIME):
+		usleep(SLEEP_TIME);
 	}
 }
