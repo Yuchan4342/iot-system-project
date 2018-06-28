@@ -12,7 +12,7 @@ $(TARGET): main.o
 	$(CC) $(LDFLAGS) $^ -o $@ -lcurses
 
 %.o : %.c
-	$(CC) $(CFLAGS) -c $< -o $@ -I/usr/include -lcurses
+	$(CC) $(CFLAGS) -c $< -o $@
 
 .PHONY: clean
 clean:
