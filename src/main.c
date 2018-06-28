@@ -20,12 +20,12 @@ void sendPattern() {
 	int i, pattern[FLASH_NUM];
 	// 光らせるLEDのパターン(0-255)
 	int p[FLASH_NUM] = { 1, 2, 4, 8, 16, 32, 64, 128, 1, 2 };
-	// 光らせる時刻(タイムスタンプ)(0-16,777,215)
+	// 光らせる時刻(タイムスタンプ)(0-255)
 	int timestamp[FLASH_NUM] = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
-	for (int i = 0; i < FLASH_NUM; i++) {
+	for (i = 0; i < FLASH_NUM; i++) {
 		pattern[i] = 0;
 		// パターンは下8bitに代入
-		pattern[i] += p[FLASH_NUM];
+		pattern[i] += p[i];
 		// タイムスタンプは上24bitに代入
 		pattern[i] += timestamp[i] * 256;
 	}
