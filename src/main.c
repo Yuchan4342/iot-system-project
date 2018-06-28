@@ -23,7 +23,7 @@ void run() {
 	int i = 0;
 	while (1) {
 		// 送信
-		printf("Send i\n", i++);
+		printf("Send %d\n", i++);
 		usleep(SLEEP_TIME);
 	}
 }
