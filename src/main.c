@@ -40,11 +40,14 @@ int main(int argc, char* argv[]) {
     close(fd);
     return 1;
   }
+  h2p_lw_addr = virtual_base
+      + ((unsigned long)(ALT_LWFPGASLVS_OFST + MYPIO_0_BASE)
+          & (unsigned long)(HW_REGS_MASK));
   sendPattern();
   usleep(1000000);
   run();
   // clean up our memory mapping and exit
-  if (munmap( virtual_base, HW_REGS_SPAN ) != 0) {
+  if (munmap(virtual_base, HW_REGS_SPAN ) != 0) {
     printf("ERROR: munmap() failed...\n");
     close(fd);
     return 1;
