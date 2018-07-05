@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
 #include <termios.h>
 #include <fcntl.h>
@@ -59,9 +58,10 @@ void run() {
     memset(bits, '0', sizeof(bits));
     read(0, &c, 8);
     int j;
-    for (j = 0; j < 8; j++) {
+    for (j = 0; j < 256; j++)
+      bits[j] = '0';
+    for (j = 0; j < 8; j++)
       bits[c[j] - ';'] = '1';
-    }
     int d = 0x80;
     led_pattern = 0;
     for (j = 0; j < 8; j++) {
