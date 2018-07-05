@@ -40,7 +40,6 @@ void sendPattern() {
 void run() {
   printf("Game Start!\n");
   int i = 0;
-  char rt = '\n';
   char keys[9] = "asdfjkl;";
   struct termios term_attr;
   tcgetattr(0, &term_attr);
@@ -67,10 +66,8 @@ void run() {
     for (j = 0; j < 8; j++) {
       led_pattern += ((bits[keys[j] - ';'] - '0') % 2) * d;
       d /= 2;
-      write(0, &bits[keys[j] - ';'], 1);
     }
-    write(0, &rt, 1);
-    printf("%d\n", led_pattern);
+    printf("Send: %d\n", led_pattern);
     // ボードに送信するコードはここに
 
     i++;
