@@ -54,18 +54,18 @@ void run() {
   int led_pattern;
 
   while (i < 10000) {
-    // 送信
-    memset(bits, '0', sizeof(bits));
     read(0, &c, 8);
     int j;
     for (j = 0; j < 256; j++)
       bits[j] = '0';
-    for (j = 0; j < 8; j++)
+    for (j = 0; j < 8; j++) {
       bits[c[j] - ';'] = '1';
+      c[j] = '0';
+    }
     int d = 0x80;
     led_pattern = 0;
     for (j = 0; j < 8; j++) {
-      led_pattern += (bits[keys[j] - ';'] - '0') * d;
+      led_pattern += ((bits[keys[j] - ';'] - '0') % 2) * d;
       d /= 2;
       write(0, &bits[keys[j] - ';'], 1);
     }
