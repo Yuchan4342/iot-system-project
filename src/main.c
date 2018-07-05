@@ -4,6 +4,11 @@
 #include <fcntl.h>
 #include <sys/mman.h>
 #include <string.h>
+#include "hwlib.h"
+#include "socal/socal.h"
+#include "socal/hps.h"
+#include "socal/alt_gpio.h"
+#include "../DE10_NANO_SoC_GHRD/hps_0.h"
 
 #define FLASH_NUM 10
 #define SLEEP_TIME 1000
