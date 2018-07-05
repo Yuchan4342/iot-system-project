@@ -1,0 +1,64 @@
+/home/masashi/2018/univ/IoT/iot-system-project/game_clock.v {1 {vlog -work work -stats=none /home/masashi/2018/univ/IoT/iot-system-project/game_clock.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module game_clock
+
+Top level modules:
+	game_clock
+
+} {} {}} /home/masashi/2018/univ/IoT/iot-system-project/test_iot_system_project.v {1 {vlog -work work -stats=none /home/masashi/2018/univ/IoT/iot-system-project/test_iot_system_project.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module test_iot_system_project
+
+Top level modules:
+	test_iot_system_project
+
+} {} {}} /home/masashi/2018/univ/IoT/iot-system-project/score_calculator.v {1 {vlog -work work -stats=none /home/masashi/2018/univ/IoT/iot-system-project/score_calculator.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module score_calculator
+
+Top level modules:
+	score_calculator
+
+} {} {}} /home/masashi/2018/univ/IoT/iot-system-project/clock10m.v {1 {vlog -work work -stats=none /home/masashi/2018/univ/IoT/iot-system-project/clock10m.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module clock10m
+
+Top level modules:
+	clock10m
+
+} {} {}} /home/masashi/2018/univ/IoT/iot-system-project/iot_system_project.v {1 {vlog -work work -stats=none /home/masashi/2018/univ/IoT/iot-system-project/iot_system_project.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module iot_system_project
+
+Top level modules:
+	iot_system_project
+
+} {} {}} /home/masashi/2018/univ/IoT/iot-system-project/input_manager.v {1 {vlog -work work -stats=none /home/masashi/2018/univ/IoT/iot-system-project/input_manager.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module input_manager
+
+Top level modules:
+	input_manager
+
+} {} {}} /home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v {1 {vlog -work work -stats=none /home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module nanaseg_decoder
+
+Top level modules:
+	nanaseg_decoder
+
+} {} {}} /home/masashi/2018/univ/IoT/iot-system-project/test_game_clock.v {1 {vlog -work work -stats=none /home/masashi/2018/univ/IoT/iot-system-project/test_game_clock.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module test_game_clock
+
+Top level modules:
+	test_game_clock
+
+} {} {}} /home/masashi/2018/univ/IoT/iot-system-project/pattern_manager.v {1 {vlog -work work -stats=none /home/masashi/2018/univ/IoT/iot-system-project/pattern_manager.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module pattern_manager
+
+Top level modules:
+	pattern_manager
+
+} {} {}}

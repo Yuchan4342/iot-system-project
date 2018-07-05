@@ -1,0 +1,7 @@
+module input_mux (
+  input [31:0] read_data,
+  output [7:0] user_out,
+  output [7:0] pattern_out
+);
+	reg pattern_end;
+	

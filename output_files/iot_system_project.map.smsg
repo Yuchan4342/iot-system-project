@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at MyPIO.v(39): always construct contains both blocking and non-blocking assignments File: /home/masashi/2018/univ/IoT/iot-system-project/MyPIO.v Line: 39
+Warning (10268): Verilog HDL information at game_clock.v(9): always construct contains both blocking and non-blocking assignments File: /home/masashi/2018/univ/IoT/iot-system-project/game_clock.v Line: 9
