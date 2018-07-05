@@ -44,14 +44,14 @@ void run() {
 	char keys[9] = "asdfjkl;";
 	struct termios term_attr;
 	tcgetattr(0, &term_attr);
-  term_attr.c_lflag &= ~(ICANON|ECHO);
-  term_attr.c_cc[VMIN] = 8;
-  term_attr.c_cc[VTIME] = 0;
-  tcsetattr(0, TCSANOW, &term_attr);
-  fcntl(0, F_SETFL, O_NONBLOCK);
-  char bits[256];
-  char c[8];
-  
+	term_attr.c_lflag &= ~(ICANON | ECHO);
+	term_attr.c_cc[VMIN] = 8;
+	term_attr.c_cc[VTIME] = 0;
+	tcsetattr(0, TCSANOW, &term_attr);
+	fcntl(0, F_SETFL, O_NONBLOCK);
+	char bits[256];
+	char c[8];
+
 	while (i < 10000) {
 		// 送信
 		// printf("Send %d\n", i);
@@ -66,7 +66,7 @@ void run() {
 		}
 		write(0, &rt, 1);
 		// ボードに送信するコードはここに
-		
+
 		i++;
 		usleep(SLEEP_TIME * 100);
 	}
