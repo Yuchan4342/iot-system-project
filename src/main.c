@@ -58,8 +58,8 @@ void run() {
     for (j = 0; j < 256; j++)
       bits[j] = '0';
     for (j = 0; j < 8; j++) {
-      bits[c[j] - ';'] = '1';
-      c[j] = '0';
+      if (c[j] != 0) bits[c[j] - ';'] = '1';
+      c[j] = 0;
     }
     int d = 0x80;
     led_pattern = 0;
