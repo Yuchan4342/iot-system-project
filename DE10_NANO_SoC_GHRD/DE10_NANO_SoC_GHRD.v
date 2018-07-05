@@ -84,12 +84,12 @@ module DE10_NANO_SoC_GHRD(
     input    [ 3: 0]    SW,
 
     //added
+    output [19:0] GPIO_0,
+    output [19:0] GPIO_1,
     output [7:0] PATTERN_KEYS,
     output [11:0] SEG_OUTPUT,
     output [7:0] USER_KEYS
 );
-
-
 
 //=======================================================
 //  REG/WIRE declarations
@@ -199,9 +199,9 @@ soc_system u0(
                .hps_0_f2h_stm_hw_events_stm_hwevents(stm_hw_events),        //        hps_0_f2h_stm_hw_events.stm_hwevents
                .hps_0_f2h_warm_reset_req_reset_n(~hps_warm_reset),          //       hps_0_f2h_warm_reset_req.reset_n
                .mypio_0_conduit_end_led(LED),
-               .mypio_0_conduit_end_1_pattern_keys(PATTERN_KEYS),
-               .mypio_0_conduit_end_2_seg_output(SEG_OUTPUT),
-               .mypio_0_conduit_end_3_user_keys(USER_KEYS),
+               .mypio_0_conduit_end_1_pattern_keys(GPIO_0[10:17]),
+               .mypio_0_conduit_end_2_seg_output(GPIO_1[10:21]),
+               .mypio_0_conduit_end_3_user_keys(GPIO_0[18:25]),
                .mypio_0_conduit_end_4_switch(SW),
                .mypio_0_conduit_end_5_key(KEY)
            );
