@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <termios.h>
 #include <fcntl.h>
@@ -51,20 +52,25 @@ void run() {
   fcntl(0, F_SETFL, O_NONBLOCK);
   char bits[256];
   char c[8];
+  int led_pattern;
 
   while (i < 10000) {
     // 送信
-    // printf("Send %d\n", i);
     memset(bits, '0', sizeof(bits));
     read(0, &c, 8);
     int j;
     for (j = 0; j < 8; j++) {
       bits[c[j] - ';'] = '1';
     }
+    int d = 0x80;
+    led_pattern = 0;
     for (j = 0; j < 8; j++) {
+      led_pattern += (bits[keys[j] - ';'] - '0') * d;
+      d /= 2;
       write(0, &bits[keys[j] - ';'], 1);
     }
     write(0, &rt, 1);
+    printf("%d\n", led_pattern);
     // ボードに送信するコードはここに
 
     i++;
