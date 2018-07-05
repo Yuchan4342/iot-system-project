@@ -1,0 +1,14 @@
+module iot_system_project (
+  input CLOCK10M,
+  input [1:0] KEY,
+  input [15:0] pattern_with_timestamp,
+  output [7:0] pattern_out
+);
+  wire clock;
+  wire [7:0] game_clock;
+  wire [7:0] pattern
+  pll pll(CLOCK10M, 1, clock);
+  game_clock(clock, ~KEY[0], game_clock);
+  pattern_manager(clock, game_clock, pattern_with_timestamp, pattern)
+  assign pattern_out = pattern;
+endmodule

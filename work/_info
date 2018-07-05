@@ -1,0 +1,199 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/opt/intelFPGA_lite/16.1/modelsim_ase
+vclock10m
+Z0 !s110 1530478881
+!i10b 1
+!s100 F39EWLF>:H1c[;JT@^e`^1
+ITd7nGOLn0<:Ug:[nSkj??0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d/home/masashi/2018/univ/IoT/iot-system-project
+w1530204831
+8/home/masashi/2018/univ/IoT/iot-system-project/clock10m.v
+F/home/masashi/2018/univ/IoT/iot-system-project/clock10m.v
+L0 8
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1530478880.000000
+!s107 /home/masashi/2018/univ/IoT/iot-system-project/clock10m.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/masashi/2018/univ/IoT/iot-system-project/clock10m.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vgame_clock
+Z7 !s110 1530478880
+!i10b 1
+!s100 ihJ3lh?;B2Qc]0Gz>UFZ43
+I6J>D<8mWkm3TfS:D?zHfB1
+R1
+R2
+w1530478633
+8/home/masashi/2018/univ/IoT/iot-system-project/game_clock.v
+F/home/masashi/2018/univ/IoT/iot-system-project/game_clock.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/masashi/2018/univ/IoT/iot-system-project/game_clock.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/masashi/2018/univ/IoT/iot-system-project/game_clock.v|
+!i113 1
+R5
+R6
+vinput_manager
+R7
+!i10b 1
+!s100 _mW15b7G=@CZ1]mdnadc13
+I`[8IVJk1n8@X@43J7i`4Y1
+R1
+R2
+w1530280965
+8/home/masashi/2018/univ/IoT/iot-system-project/input_manager.v
+F/home/masashi/2018/univ/IoT/iot-system-project/input_manager.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/masashi/2018/univ/IoT/iot-system-project/input_manager.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/masashi/2018/univ/IoT/iot-system-project/input_manager.v|
+!i113 1
+R5
+R6
+viot_system_project
+R7
+!i10b 1
+!s100 Z0L^VXKRmZX4ZiD8Y?G6N0
+IRmDXFFhR78V>^`]V]0M4O2
+R1
+R2
+w1530475280
+8/home/masashi/2018/univ/IoT/iot-system-project/iot_system_project.v
+F/home/masashi/2018/univ/IoT/iot-system-project/iot_system_project.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/masashi/2018/univ/IoT/iot-system-project/iot_system_project.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/masashi/2018/univ/IoT/iot-system-project/iot_system_project.v|
+!i113 1
+R5
+R6
+vnanaseg_decoder
+R7
+!i10b 1
+!s100 ^>f9zbB_lPcQ5@gEl8_h71
+I0dC=LCeT:CVi5JTGi<6Cl2
+R1
+R2
+w1530287000
+8/home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v
+F/home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v
+L0 20
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v|
+!i113 1
+R5
+R6
+vpattern_manager
+R7
+!i10b 1
+!s100 ?[BoaGHn8BFjMVE3K8FFG2
+IczUA=Ykfhl;jKm=kU4Fi41
+R1
+R2
+w1530280898
+8/home/masashi/2018/univ/IoT/iot-system-project/pattern_manager.v
+F/home/masashi/2018/univ/IoT/iot-system-project/pattern_manager.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/masashi/2018/univ/IoT/iot-system-project/pattern_manager.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/masashi/2018/univ/IoT/iot-system-project/pattern_manager.v|
+!i113 1
+R5
+R6
+vscore_calculator
+R7
+!i10b 1
+!s100 ^I`4]nRfPHzmI[Td@EJ^P0
+I02`6`0Kin^=l;CE5Lze872
+R1
+R2
+w1530401125
+8/home/masashi/2018/univ/IoT/iot-system-project/score_calculator.v
+F/home/masashi/2018/univ/IoT/iot-system-project/score_calculator.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/masashi/2018/univ/IoT/iot-system-project/score_calculator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/masashi/2018/univ/IoT/iot-system-project/score_calculator.v|
+!i113 1
+R5
+R6
+vtest_game_clock
+R0
+!i10b 1
+!s100 Fc9ih3ecnW1M2hCnDHUDF0
+I8z`kaBYO?DfAaogK95e7L3
+R1
+R2
+w1530478339
+8/home/masashi/2018/univ/IoT/iot-system-project/test_game_clock.v
+F/home/masashi/2018/univ/IoT/iot-system-project/test_game_clock.v
+L0 3
+R3
+r1
+!s85 0
+31
+Z8 !s108 1530478881.000000
+!s107 /home/masashi/2018/univ/IoT/iot-system-project/test_game_clock.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/masashi/2018/univ/IoT/iot-system-project/test_game_clock.v|
+!i113 1
+R5
+R6
+vtest_iot_system_project
+R0
+!i10b 1
+!s100 Nil:UgP[1g=k=aJabC3=02
+IAP_Gb8T[m;5VR4U4NJZ441
+R1
+R2
+w1530477126
+8/home/masashi/2018/univ/IoT/iot-system-project/test_iot_system_project.v
+F/home/masashi/2018/univ/IoT/iot-system-project/test_iot_system_project.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 /home/masashi/2018/univ/IoT/iot-system-project/test_iot_system_project.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/masashi/2018/univ/IoT/iot-system-project/test_iot_system_project.v|
+!i113 1
+R5
+R6

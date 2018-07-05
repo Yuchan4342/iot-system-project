@@ -1,0 +1,23 @@
+module pattern_manager (
+  input CLOCK10M,
+  input [8:0] counter10h,
+  input [15:0] pattern_with_timestamp,
+  output reg [7:0] pattern_out
+);
+  reg [7:0] patterns [255:0];
+  reg init_end = 1'b0;
+  
+  always @ (posedge counter10h)
+  begin
+    pattern_out <= patterns[counter10h[7:0]];
+  end
+
+  always @ (posedge CLOCK10M && ~init_end)
+  begin
+    if pattern_with_timestamp[7:0] == 8'h00 begin
+      init_end <= 1'b1;
+    end else begin
+      patterns[pattern_with_timestamp[15:8]] <= pattern_with_timestamp[7:0];
+    end
+  end
+endmodule

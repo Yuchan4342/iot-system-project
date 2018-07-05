@@ -1,0 +1,10 @@
+module input_manager (
+  input counter10h,
+  input [7:0] user_input,
+  output reg [7:0] key_out
+);
+  always @ (posedge counter10h)
+  begin
+    key_out <= user_input;
+  end
+endmodule

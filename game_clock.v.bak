@@ -1,0 +1,20 @@
+// 0.1秒ごとに加算するタウンターモジュール
+// key0でリセット
+module game_clock (
+  input CLOCK10M,
+  input KEY0,
+  output reg [7:0] counter_out
+);
+  reg [23:0] 10mcounter = 24'h000000;
+  always @ (posedge CLOCK10M)
+  begin
+    10mcounter <= #1 10mcounter+1;
+    if 10mcounter == 24'd10000000 begin
+      counter_out #1 <= counter_out+1;
+      10mcounter <= #1 24'h000000;
+    end
+    if KEY0 == 0 begin
+      counter_out <= 8'h00;
+    end
+  end
+endmodule
