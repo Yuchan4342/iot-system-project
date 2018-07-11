@@ -2,18 +2,57 @@
 #include <unistd.h>
 #include <termios.h>
 #include <fcntl.h>
+#include <sys/mman.h>
 #include <string.h>
+#include "hwlib.h"
+#include "socal/socal.h"
+#include "socal/hps.h"
+#include "socal/alt_gpio.h"
+#include "../DE10_NANO_SoC_GHRD/hps_0.h"
 
 #define FLASH_NUM 10
 #define SLEEP_TIME 1000
 
+#define HW_REGS_BASE (ALT_STM_OFST)
+#define HW_REGS_SPAN (0x04000000)
+#define HW_REGS_MASK (HW_REGS_SPAN - 1)
+
 void sendPattern();
 void run();
 
+void *virtual_base;
+void *h2p_lw_addr;
+
 int main(int argc, char* argv[]) {
+  int fd;
+  // メモリ空間をボードに割り当てる
+  // map the address space for the LED registers into user space so we can interact with them.
+  // we'll actually map in the entire CSR span of the HPS since we want to access various registers within that span
+
+  if ((fd = open( "/dev/mem", (O_RDWR|O_SYNC))) == -1) {
+    printf("ERROR: could not open \"/dev/mem\"...\n");
+    return 1;
+  }
+  virtual_base = mmap(NULL, HW_REGS_SPAN, (PROT_READ|PROT_WRITE),
+                      MAP_SHARED, fd, HW_REGS_BASE);
+  if (virtual_base == MAP_FAILED) {
+    printf("ERROR: mmap() failed...\n");
+    close(fd);
+    return 1;
+  }
+  h2p_lw_addr = virtual_base
+      + ((unsigned long)(ALT_LWFPGASLVS_OFST + MYPIO_0_BASE)
+          & (unsigned long)(HW_REGS_MASK));
   sendPattern();
   usleep(1000000);
   run();
+  // clean up our memory mapping and exit
+  if (munmap(virtual_base, HW_REGS_SPAN ) != 0) {
+    printf("ERROR: munmap() failed...\n");
+    close(fd);
+    return 1;
+  }
+  close(fd);
   return 0;
 }
 
@@ -33,7 +72,10 @@ void sendPattern() {
     pattern[i] += (timestamp[i] % 1024) * 0x004000000;
   }
   // ボードに送信するコードはここに
-
+  for (i = 0; i < FLASH_NUM; i++) {
+  	*(uint32_t *)h2p_lw_addr = pattern[i];
+  	usleep(SLEEP_TIME * 100);
+  }
 }
 
 // ゲーム本番
@@ -68,7 +110,8 @@ void run() {
       d /= 2;
     }
     printf("Send: %d\n", led_pattern);
-    // ボードに送信するコードはここに
+    // ボードのメモリに送信するコードはここに
+    *(uint32_t *)h2p_lw_addr = led_pattern;
 
     i++;
     usleep(SLEEP_TIME * 100);

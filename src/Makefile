@@ -1,7 +1,7 @@
 TARGET = main
 
 CROSS_COMPILE = arm-linux-gnueabihf-
-CFLAGS = -Dsoc_cv_av -g -Wall -I ${SOCEDS_DEST_ROOT}/ip/altera/hps/altera_hps/hwlib/include
+CFLAGS = -Dsoc_cv_av -g -Wall -I ${SOCEDS_DEST_ROOT}/ip/altera/hps/altera_hps/hwlib/include -I ${SOCEDS_DEST_ROOT}/ip/altera/hps/altera_hps/hwlib/include/soc_cv_av
 LDFLAGS =  -g -Wall
 CC = $(CROSS_COMPILE)gcc
 ARCH= arm
