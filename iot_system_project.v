@@ -22,4 +22,5 @@ module iot_system_project (
   nanaseg_decoder nanaseg_decoder(clock, score, seg_output);
   assign pattern_out = pattern;
   assign user_output = user_input;
+  assign led = counter10h[9:2];
 endmodule

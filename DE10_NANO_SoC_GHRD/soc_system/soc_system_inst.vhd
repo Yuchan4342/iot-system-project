@@ -73,12 +73,12 @@
 			memory_mem_dm                         : out   std_logic_vector(3 downto 0);                     -- mem_dm
 			memory_oct_rzqin                      : in    std_logic                     := 'X';             -- oct_rzqin
 			reset_reset_n                         : in    std_logic                     := 'X';             -- reset_n
+			mypio_0_conduit_end_led               : out   std_logic_vector(7 downto 0);                     -- led
 			mypio_0_conduit_end_1_pattern_keys    : out   std_logic_vector(7 downto 0);                     -- pattern_keys
 			mypio_0_conduit_end_2_seg_output      : out   std_logic_vector(11 downto 0);                    -- seg_output
 			mypio_0_conduit_end_3_user_keys       : out   std_logic_vector(7 downto 0);                     -- user_keys
 			mypio_0_conduit_end_4_switch          : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- switch
-			mypio_0_conduit_end_5_key             : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- key
-			mypio_0_conduit_end_led               : out   std_logic_vector(7 downto 0)                      -- led
+			mypio_0_conduit_end_5_key             : in    std_logic_vector(1 downto 0)  := (others => 'X')  -- key
 		);
 	end component soc_system;
 
@@ -157,11 +157,11 @@
 			memory_mem_dm                         => CONNECTED_TO_memory_mem_dm,                         --                               .mem_dm
 			memory_oct_rzqin                      => CONNECTED_TO_memory_oct_rzqin,                      --                               .oct_rzqin
 			reset_reset_n                         => CONNECTED_TO_reset_reset_n,                         --                          reset.reset_n
+			mypio_0_conduit_end_led               => CONNECTED_TO_mypio_0_conduit_end_led,               --            mypio_0_conduit_end.led
 			mypio_0_conduit_end_1_pattern_keys    => CONNECTED_TO_mypio_0_conduit_end_1_pattern_keys,    --          mypio_0_conduit_end_1.pattern_keys
 			mypio_0_conduit_end_2_seg_output      => CONNECTED_TO_mypio_0_conduit_end_2_seg_output,      --          mypio_0_conduit_end_2.seg_output
 			mypio_0_conduit_end_3_user_keys       => CONNECTED_TO_mypio_0_conduit_end_3_user_keys,       --          mypio_0_conduit_end_3.user_keys
 			mypio_0_conduit_end_4_switch          => CONNECTED_TO_mypio_0_conduit_end_4_switch,          --          mypio_0_conduit_end_4.switch
-			mypio_0_conduit_end_5_key             => CONNECTED_TO_mypio_0_conduit_end_5_key,             --          mypio_0_conduit_end_5.key
-			mypio_0_conduit_end_led               => CONNECTED_TO_mypio_0_conduit_end_led                --            mypio_0_conduit_end.led
+			mypio_0_conduit_end_5_key             => CONNECTED_TO_mypio_0_conduit_end_5_key              --          mypio_0_conduit_end_5.key
 		);
 

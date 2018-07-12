@@ -472,12 +472,12 @@ set_global_assignment -name USE_DLL_FREQUENCY_FOR_DQS_DELAY_CHAIN ON
 set_global_assignment -name UNIPHY_SEQUENCER_DQS_CONFIG_ENABLE ON
 set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
 set_global_assignment -name ECO_REGENERATE_REPORT ON
-set_global_assignment -name VERILOG_FILE score_calculator.v
-set_global_assignment -name VERILOG_FILE pattern_manager.v
-set_global_assignment -name VERILOG_FILE iot_system_project.v
-set_global_assignment -name VERILOG_FILE input_manager.v
-set_global_assignment -name VERILOG_FILE game_clock.v
-set_global_assignment -name VERILOG_FILE 7seg_decoder.v
+set_global_assignment -name VERILOG_FILE ../score_calculator.v
+set_global_assignment -name VERILOG_FILE ../pattern_manager.v
+set_global_assignment -name VERILOG_FILE ../iot_system_project.v
+set_global_assignment -name VERILOG_FILE ../input_manager.v
+set_global_assignment -name VERILOG_FILE ../game_clock.v
+set_global_assignment -name VERILOG_FILE ../7seg_decoder.v
 set_global_assignment -name SDC_FILE DE10_NANO_SOC_GHRD.sdc
 set_global_assignment -name VERILOG_FILE ip/intr_capturer/intr_capturer.v
 set_global_assignment -name VERILOG_FILE ip/edge_detect/altera_edge_detector.v
@@ -486,42 +486,15 @@ set_global_assignment -name QIP_FILE ip/altsource_probe/hps_reset.qip
 set_global_assignment -name QIP_FILE soc_system/synthesis/soc_system.qip
 set_global_assignment -name QIP_FILE clock10m.qip
 set_global_assignment -name SIP_FILE clock10m.sip
-set_location_assignment PIN_AH26 -to USER_KEYS[7]
-set_location_assignment PIN_AF25 -to USER_KEYS[6]
-set_location_assignment PIN_AF23 -to USER_KEYS[5]
-set_location_assignment PIN_AH22 -to USER_KEYS[4]
-set_location_assignment PIN_AG21 -to USER_KEYS[3]
-set_location_assignment PIN_AA20 -to USER_KEYS[2]
-set_location_assignment PIN_AE22 -to USER_KEYS[1]
-set_location_assignment PIN_AF21 -to USER_KEYS[0]
 set_location_assignment PIN_AG25 -to PATTERN_KEYS[7]
 set_location_assignment PIN_AH24 -to PATTERN_KEYS[6]
 set_location_assignment PIN_AG23 -to PATTERN_KEYS[5]
 set_location_assignment PIN_AG24 -to PATTERN_KEYS[4]
 set_location_assignment PIN_AH21 -to PATTERN_KEYS[3]
 set_location_assignment PIN_AH23 -to PATTERN_KEYS[2]
-set_location_assignment PIN_AG20 -to PATTERN_KEYS[0]
 set_location_assignment PIN_AF22 -to PATTERN_KEYS[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to USER_KEYS[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to USER_KEYS[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to USER_KEYS[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to USER_KEYS[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to USER_KEYS[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to USER_KEYS[7]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to USER_KEYS[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to USER_KEYS[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to USER_KEYS
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PATTERN_KEYS[7]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PATTERN_KEYS[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PATTERN_KEYS[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PATTERN_KEYS[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PATTERN_KEYS[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PATTERN_KEYS[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PATTERN_KEYS[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PATTERN_KEYS[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PATTERN_KEYS
+set_location_assignment PIN_AG20 -to PATTERN_KEYS[0]
 set_location_assignment PIN_V12 -to SEG_OUTPUT[11]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SEG_OUTPUT[11]
 set_location_assignment PIN_W12 -to SEG_OUTPUT[10]
 set_location_assignment PIN_D8 -to SEG_OUTPUT[9]
 set_location_assignment PIN_AF7 -to SEG_OUTPUT[8]
@@ -533,16 +506,43 @@ set_location_assignment PIN_D12 -to SEG_OUTPUT[3]
 set_location_assignment PIN_C12 -to SEG_OUTPUT[2]
 set_location_assignment PIN_AC23 -to SEG_OUTPUT[1]
 set_location_assignment PIN_Y19 -to SEG_OUTPUT[0]
+set_location_assignment PIN_AH26 -to USER_KEYS[7]
+set_location_assignment PIN_AF25 -to USER_KEYS[6]
+set_location_assignment PIN_AF23 -to USER_KEYS[5]
+set_location_assignment PIN_AH22 -to USER_KEYS[4]
+set_location_assignment PIN_AG21 -to USER_KEYS[3]
+set_location_assignment PIN_AA20 -to USER_KEYS[2]
+set_location_assignment PIN_AE22 -to USER_KEYS[1]
+set_location_assignment PIN_AF21 -to USER_KEYS[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PATTERN_KEYS[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PATTERN_KEYS[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PATTERN_KEYS[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PATTERN_KEYS[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PATTERN_KEYS[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PATTERN_KEYS[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PATTERN_KEYS[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PATTERN_KEYS[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PATTERN_KEYS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SEG_OUTPUT[11]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SEG_OUTPUT[10]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SEG_OUTPUT[9]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SEG_OUTPUT[8]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SEG_OUTPUT[7]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SEG_OUTPUT[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SEG_OUTPUT[3]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SEG_OUTPUT[5]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SEG_OUTPUT[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SEG_OUTPUT[3]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SEG_OUTPUT[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SEG_OUTPUT[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SEG_OUTPUT[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SEG_OUTPUT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to USER_KEYS[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to USER_KEYS[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to USER_KEYS[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to USER_KEYS[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to USER_KEYS[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to USER_KEYS[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to USER_KEYS[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to USER_KEYS[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to USER_KEYS
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

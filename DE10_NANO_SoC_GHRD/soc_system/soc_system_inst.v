@@ -72,11 +72,11 @@
 		.memory_mem_dm                         (<connected-to-memory_mem_dm>),                         //                               .mem_dm
 		.memory_oct_rzqin                      (<connected-to-memory_oct_rzqin>),                      //                               .oct_rzqin
 		.reset_reset_n                         (<connected-to-reset_reset_n>),                         //                          reset.reset_n
+		.mypio_0_conduit_end_led               (<connected-to-mypio_0_conduit_end_led>),               //            mypio_0_conduit_end.led
 		.mypio_0_conduit_end_1_pattern_keys    (<connected-to-mypio_0_conduit_end_1_pattern_keys>),    //          mypio_0_conduit_end_1.pattern_keys
 		.mypio_0_conduit_end_2_seg_output      (<connected-to-mypio_0_conduit_end_2_seg_output>),      //          mypio_0_conduit_end_2.seg_output
 		.mypio_0_conduit_end_3_user_keys       (<connected-to-mypio_0_conduit_end_3_user_keys>),       //          mypio_0_conduit_end_3.user_keys
 		.mypio_0_conduit_end_4_switch          (<connected-to-mypio_0_conduit_end_4_switch>),          //          mypio_0_conduit_end_4.switch
-		.mypio_0_conduit_end_5_key             (<connected-to-mypio_0_conduit_end_5_key>),             //          mypio_0_conduit_end_5.key
-		.mypio_0_conduit_end_led               (<connected-to-mypio_0_conduit_end_led>)                //            mypio_0_conduit_end.led
+		.mypio_0_conduit_end_5_key             (<connected-to-mypio_0_conduit_end_5_key>)              //          mypio_0_conduit_end_5.key
 	);
 

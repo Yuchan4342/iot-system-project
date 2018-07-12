@@ -3,7 +3,7 @@
 module game_clock (
   input CLOCK10M,
   input KEY0,
-  output reg [9:0] counter_out = 10'b0000000000
+  output reg [9:0] counter_out
 );
   reg [23:0] tenm_counter = 24'h000000;
   always @ (posedge CLOCK10M)

@@ -73,12 +73,12 @@ module soc_system (
 	memory_mem_dm,
 	memory_oct_rzqin,
 	reset_reset_n,
+	mypio_0_conduit_end_led,
 	mypio_0_conduit_end_1_pattern_keys,
 	mypio_0_conduit_end_2_seg_output,
 	mypio_0_conduit_end_3_user_keys,
 	mypio_0_conduit_end_4_switch,
-	mypio_0_conduit_end_5_key,
-	mypio_0_conduit_end_led);	
+	mypio_0_conduit_end_5_key);	
 
 	input	[1:0]	button_pio_external_connection_export;
 	input		clk_clk;
@@ -153,10 +153,10 @@ module soc_system (
 	output	[3:0]	memory_mem_dm;
 	input		memory_oct_rzqin;
 	input		reset_reset_n;
+	output	[7:0]	mypio_0_conduit_end_led;
 	output	[7:0]	mypio_0_conduit_end_1_pattern_keys;
 	output	[11:0]	mypio_0_conduit_end_2_seg_output;
 	output	[7:0]	mypio_0_conduit_end_3_user_keys;
 	input	[3:0]	mypio_0_conduit_end_4_switch;
 	input	[1:0]	mypio_0_conduit_end_5_key;
-	output	[7:0]	mypio_0_conduit_end_led;
 endmodule
