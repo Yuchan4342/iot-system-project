@@ -27,6 +27,8 @@ wire [7:0] led_internal;
 
 iot_system_project iot_system_project (
   clk,
+  write,
+  address,
   key,
   switch,
   writedata[31:15],
@@ -43,16 +45,10 @@ always @ (posedge clk, posedge reset ) begin
 	 led <= 0;
   end
   else begin
-	 if (write) begin
-	   case (address)
-		 2'b00: begin
-		  pattern_keys <= pattern_keys_internal;
-		  user_keys <= user_keys_internal;
-		  seg_output <= seg_output_internal;
-		  led <= led_internal;
-		 end
-	   endcase
-	 end
+	  pattern_keys <= pattern_keys_internal;
+	  user_keys <= user_keys_internal;
+	  seg_output <= seg_output_internal;
+	  led <= led_internal;
   end
 end
 endmodule

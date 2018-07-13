@@ -1,0 +1,133 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 100C Model Setup 'clock10m|clock10m_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -13.652
+TNS   : -340.196
+
+Type  : Slow 1100mV 100C Model Setup 'game_clock:game_clock|counter_out[0]'
+Slack : -12.644
+TNS   : -289.276
+
+Type  : Slow 1100mV 100C Model Hold 'clock10m|clock10m_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.097
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Hold 'game_clock:game_clock|counter_out[0]'
+Slack : 0.509
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'game_clock:game_clock|counter_out[0]'
+Slack : -0.538
+TNS   : -18.092
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'clock10m|clock10m_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'CLOCK50M'
+Slack : 9.944
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'clock10m|clock10m_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 48.597
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Setup 'clock10m|clock10m_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -15.175
+TNS   : -317.345
+
+Type  : Slow 1100mV -40C Model Setup 'game_clock:game_clock|counter_out[0]'
+Slack : -12.940
+TNS   : -295.215
+
+Type  : Slow 1100mV -40C Model Hold 'clock10m|clock10m_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -0.592
+TNS   : -2.286
+
+Type  : Slow 1100mV -40C Model Hold 'game_clock:game_clock|counter_out[0]'
+Slack : 0.573
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'game_clock:game_clock|counter_out[0]'
+Slack : -0.538
+TNS   : -18.020
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'clock10m|clock10m_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'CLOCK50M'
+Slack : 9.968
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'clock10m|clock10m_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 48.573
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Setup 'clock10m|clock10m_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -8.493
+TNS   : -242.847
+
+Type  : Fast 1100mV 100C Model Setup 'game_clock:game_clock|counter_out[0]'
+Slack : -5.988
+TNS   : -134.780
+
+Type  : Fast 1100mV 100C Model Hold 'game_clock:game_clock|counter_out[0]'
+Slack : 0.163
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Hold 'clock10m|clock10m_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.185
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'game_clock:game_clock|counter_out[0]'
+Slack : 0.091
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'clock10m|clock10m_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'CLOCK50M'
+Slack : 9.646
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'clock10m|clock10m_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 48.894
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Setup 'clock10m|clock10m_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -6.188
+TNS   : -170.956
+
+Type  : Fast 1100mV -40C Model Setup 'game_clock:game_clock|counter_out[0]'
+Slack : -5.630
+TNS   : -126.926
+
+Type  : Fast 1100mV -40C Model Hold 'clock10m|clock10m_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.059
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Hold 'game_clock:game_clock|counter_out[0]'
+Slack : 0.142
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'game_clock:game_clock|counter_out[0]'
+Slack : 0.111
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'clock10m|clock10m_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'CLOCK50M'
+Slack : 9.634
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'clock10m|clock10m_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 48.897
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -43,18 +43,18 @@ module nanaseg_decoder (
   always @ (posedge CLOCK10M) begin
     case(dist_digit)
       2'b00: begin
-			seg_output = seg_decode(score%10);
-			seg_output[7] = 1'b1;
-		end
+        seg_output = seg_decode(score%10);
+        seg_output[7] = 1'b1;
+      end
       2'b01: begin
-			seg_output = seg_decode((score/10)%10);
-		   seg_output[8] = 1'b1;
-		end
+        seg_output = seg_decode((score/10)%10);
+        seg_output[8] = 1'b1;
+      end
       2'b10: begin
-			seg_output = seg_decode((score/100)%10);
-		   seg_output[11] = 1'b1;
-		end
+        seg_output = seg_decode((score/100)%10);
+        seg_output[11] = 1'b1;
+      end
     endcase
-    dist_digit = (dist_digit == 2'b10) ? 2'b0 : dist_digit+1;
+    dist_digit <= (dist_digit == 2'b10) ? 2'b00 : dist_digit+1;
   end
 endmodule

@@ -1,5 +1,5 @@
 module score_calculator (
-  input [9:0] counter10h,
+  input counter10h,
   input [7:0] pattern,
   input [7:0] user_input,
   output [10:0] score_out

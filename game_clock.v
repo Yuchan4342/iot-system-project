@@ -11,9 +11,9 @@ module game_clock (
     if (KEY0 == 1) begin
       counter_out <= 10'b0000000000;
     end else begin
-		tenm_counter = tenm_counter+1;
-	 end
-	 if (tenm_counter == 24'd10000000) begin
+		  tenm_counter = tenm_counter+1;
+	  end
+	 if (tenm_counter == 24'd1000000) begin
       counter_out <= counter_out+1;
       tenm_counter = 24'h000000;
 	 end

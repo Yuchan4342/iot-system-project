@@ -1,5 +1,5 @@
-Analysis & Elaboration report for iot_system_project
-Thu Jul  5 14:28:52 2018
+Analysis & Synthesis report for iot_system_project
+Thu Jul 12 17:33:54 2018
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -7,14 +7,32 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration IP Cores Summary
-  5. Parameter Settings for User Entity Instance: clock10m:clock10m|clock10m_0002:clock10m_inst|altera_pll:altera_pll_i
-  6. Analysis & Elaboration Settings
-  7. Port Connectivity Checks: "clock10m:clock10m"
-  8. Analysis & Elaboration Messages
-  9. Analysis & Elaboration Suppressed Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Registers Added for RAM Pass-Through Logic
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for pattern_manager:pattern_manager|altsyncram:patterns_rtl_0|altsyncram_8pi1:auto_generated
+ 15. Parameter Settings for User Entity Instance: clock10m:clock10m|clock10m_0002:clock10m_inst|altera_pll:altera_pll_i
+ 16. Parameter Settings for Inferred Entity Instance: pattern_manager:pattern_manager|altsyncram:patterns_rtl_0
+ 17. Parameter Settings for Inferred Entity Instance: nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod0
+ 18. Parameter Settings for Inferred Entity Instance: nanaseg_decoder:nanaseg_decoder|lpm_divide:Div0
+ 19. Parameter Settings for Inferred Entity Instance: nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod1
+ 20. Parameter Settings for Inferred Entity Instance: nanaseg_decoder:nanaseg_decoder|lpm_divide:Div1
+ 21. Parameter Settings for Inferred Entity Instance: nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod2
+ 22. altsyncram Parameter Settings by Entity Instance
+ 23. Port Connectivity Checks: "clock10m:clock10m"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+ 27. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -38,22 +56,114 @@ agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu Jul  5 14:28:52 2018       ;
-; Quartus Prime Version         ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
-; Revision Name                 ; iot_system_project                          ;
-; Top-level Entity Name         ; iot_system_project                          ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Jul 12 17:33:54 2018       ;
+; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Revision Name                   ; iot_system_project                          ;
+; Top-level Entity Name           ; iot_system_project                          ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 98                                          ;
+; Total pins                      ; 69                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 8,192                                       ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 1                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEBA6U23I7S      ;                    ;
+; Top-level entity name                                                           ; iot_system_project ; iot_system_project ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -65,20 +175,222 @@ agreement for further details.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+----------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library  ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+----------+
+; MyPIO.v                          ; yes             ; User Verilog HDL File        ; /home/masashi/2018/univ/IoT/iot-system-project/MyPIO.v                         ;          ;
+; clock10m.v                       ; yes             ; User Wizard-Generated File   ; /home/masashi/2018/univ/IoT/iot-system-project/clock10m.v                      ; clock10m ;
+; clock10m/clock10m_0002.v         ; yes             ; User Verilog HDL File        ; /home/masashi/2018/univ/IoT/iot-system-project/clock10m/clock10m_0002.v        ; clock10m ;
+; game_clock.v                     ; yes             ; User Verilog HDL File        ; /home/masashi/2018/univ/IoT/iot-system-project/game_clock.v                    ;          ;
+; pattern_manager.v                ; yes             ; User Verilog HDL File        ; /home/masashi/2018/univ/IoT/iot-system-project/pattern_manager.v               ;          ;
+; iot_system_project.v             ; yes             ; User Verilog HDL File        ; /home/masashi/2018/univ/IoT/iot-system-project/iot_system_project.v            ;          ;
+; input_manager.v                  ; yes             ; User Verilog HDL File        ; /home/masashi/2018/univ/IoT/iot-system-project/input_manager.v                 ;          ;
+; score_calculator.v               ; yes             ; User Verilog HDL File        ; /home/masashi/2018/univ/IoT/iot-system-project/score_calculator.v              ;          ;
+; 7seg_decoder.v                   ; yes             ; User Verilog HDL File        ; /home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v                  ;          ;
+; altera_pll.v                     ; yes             ; Megafunction                 ; /opt/intelFPGA_lite/16.1/quartus/libraries/megafunctions/altera_pll.v          ;          ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; /opt/intelFPGA_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf        ;          ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; /opt/intelFPGA_lite/16.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;          ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; /opt/intelFPGA_lite/16.1/quartus/libraries/megafunctions/lpm_mux.inc           ;          ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; /opt/intelFPGA_lite/16.1/quartus/libraries/megafunctions/lpm_decode.inc        ;          ;
+; aglobal161.inc                   ; yes             ; Megafunction                 ; /opt/intelFPGA_lite/16.1/quartus/libraries/megafunctions/aglobal161.inc        ;          ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; /opt/intelFPGA_lite/16.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;          ;
+; altrom.inc                       ; yes             ; Megafunction                 ; /opt/intelFPGA_lite/16.1/quartus/libraries/megafunctions/altrom.inc            ;          ;
+; altram.inc                       ; yes             ; Megafunction                 ; /opt/intelFPGA_lite/16.1/quartus/libraries/megafunctions/altram.inc            ;          ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; /opt/intelFPGA_lite/16.1/quartus/libraries/megafunctions/altdpram.inc          ;          ;
+; db/altsyncram_8pi1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/masashi/2018/univ/IoT/iot-system-project/db/altsyncram_8pi1.tdf          ;          ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /opt/intelFPGA_lite/16.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;          ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; /opt/intelFPGA_lite/16.1/quartus/libraries/megafunctions/abs_divider.inc       ;          ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /opt/intelFPGA_lite/16.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;          ;
+; db/lpm_divide_i3m.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/masashi/2018/univ/IoT/iot-system-project/db/lpm_divide_i3m.tdf           ;          ;
+; db/sign_div_unsign_llh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/masashi/2018/univ/IoT/iot-system-project/db/sign_div_unsign_llh.tdf      ;          ;
+; db/alt_u_div_gve.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/masashi/2018/univ/IoT/iot-system-project/db/alt_u_div_gve.tdf            ;          ;
+; db/lpm_divide_fbm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/masashi/2018/univ/IoT/iot-system-project/db/lpm_divide_fbm.tdf           ;          ;
+; db/lpm_divide_ibm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/masashi/2018/univ/IoT/iot-system-project/db/lpm_divide_ibm.tdf           ;          ;
+; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/masashi/2018/univ/IoT/iot-system-project/db/sign_div_unsign_olh.tdf      ;          ;
+; db/alt_u_div_mve.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/masashi/2018/univ/IoT/iot-system-project/db/alt_u_div_mve.tdf            ;          ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                        ;
++---------------------------------------------+--------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                ;
++---------------------------------------------+--------------------------------------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 281                                                                                  ;
+;                                             ;                                                                                      ;
+; Combinational ALUT usage for logic          ; 511                                                                                  ;
+;     -- 7 input functions                    ; 0                                                                                    ;
+;     -- 6 input functions                    ; 38                                                                                   ;
+;     -- 5 input functions                    ; 24                                                                                   ;
+;     -- 4 input functions                    ; 57                                                                                   ;
+;     -- <=3 input functions                  ; 392                                                                                  ;
+;                                             ;                                                                                      ;
+; Dedicated logic registers                   ; 98                                                                                   ;
+;                                             ;                                                                                      ;
+; I/O pins                                    ; 69                                                                                   ;
+; Total MLAB memory bits                      ; 0                                                                                    ;
+; Total block memory bits                     ; 8192                                                                                 ;
+;                                             ;                                                                                      ;
+; Total DSP Blocks                            ; 0                                                                                    ;
+;                                             ;                                                                                      ;
+; Total PLLs                                  ; 1                                                                                    ;
+;     -- PLLs                                 ; 1                                                                                    ;
+;                                             ;                                                                                      ;
+; Maximum fan-out node                        ; clock10m:clock10m|clock10m_0002:clock10m_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
+; Maximum fan-out                             ; 84                                                                                   ;
+; Total fan-out                               ; 2127                                                                                 ;
+; Average fan-out                             ; 2.81                                                                                 ;
++---------------------------------------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                           ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                 ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |iot_system_project                       ; 511 (0)             ; 98 (0)                    ; 8192              ; 0          ; 69   ; 0            ; |iot_system_project                                                                                                                                 ; iot_system_project  ; work         ;
+;    |clock10m:clock10m|                    ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|clock10m:clock10m                                                                                                               ; clock10m            ; clock10m     ;
+;       |clock10m_0002:clock10m_inst|       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|clock10m:clock10m|clock10m_0002:clock10m_inst                                                                                   ; clock10m_0002       ; clock10m     ;
+;          |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|clock10m:clock10m|clock10m_0002:clock10m_inst|altera_pll:altera_pll_i                                                           ; altera_pll          ; work         ;
+;    |game_clock:game_clock|                ; 84 (84)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|game_clock:game_clock                                                                                                           ; game_clock          ; work         ;
+;    |nanaseg_decoder:nanaseg_decoder|      ; 387 (31)            ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder                                                                                                 ; nanaseg_decoder     ; work         ;
+;       |lpm_divide:Div0|                   ; 82 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_fbm:auto_generated|  ; 82 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Div0|lpm_divide_fbm:auto_generated                                                   ; lpm_divide_fbm      ; work         ;
+;             |sign_div_unsign_llh:divider| ; 82 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Div0|lpm_divide_fbm:auto_generated|sign_div_unsign_llh:divider                       ; sign_div_unsign_llh ; work         ;
+;                |alt_u_div_gve:divider|    ; 82 (82)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Div0|lpm_divide_fbm:auto_generated|sign_div_unsign_llh:divider|alt_u_div_gve:divider ; alt_u_div_gve       ; work         ;
+;       |lpm_divide:Div1|                   ; 79 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_ibm:auto_generated|  ; 79 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Div1|lpm_divide_ibm:auto_generated                                                   ; lpm_divide_ibm      ; work         ;
+;             |sign_div_unsign_olh:divider| ; 79 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Div1|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
+;                |alt_u_div_mve:divider|    ; 79 (79)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Div1|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider ; alt_u_div_mve       ; work         ;
+;       |lpm_divide:Mod0|                   ; 86 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_i3m:auto_generated|  ; 86 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod0|lpm_divide_i3m:auto_generated                                                   ; lpm_divide_i3m      ; work         ;
+;             |sign_div_unsign_llh:divider| ; 86 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod0|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider                       ; sign_div_unsign_llh ; work         ;
+;                |alt_u_div_gve:divider|    ; 86 (86)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod0|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider|alt_u_div_gve:divider ; alt_u_div_gve       ; work         ;
+;       |lpm_divide:Mod1|                   ; 71 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_i3m:auto_generated|  ; 71 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod1|lpm_divide_i3m:auto_generated                                                   ; lpm_divide_i3m      ; work         ;
+;             |sign_div_unsign_llh:divider| ; 71 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod1|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider                       ; sign_div_unsign_llh ; work         ;
+;                |alt_u_div_gve:divider|    ; 71 (71)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod1|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider|alt_u_div_gve:divider ; alt_u_div_gve       ; work         ;
+;       |lpm_divide:Mod2|                   ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_i3m:auto_generated|  ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod2|lpm_divide_i3m:auto_generated                                                   ; lpm_divide_i3m      ; work         ;
+;             |sign_div_unsign_llh:divider| ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod2|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider                       ; sign_div_unsign_llh ; work         ;
+;                |alt_u_div_gve:divider|    ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod2|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider|alt_u_div_gve:divider ; alt_u_div_gve       ; work         ;
+;    |pattern_manager:pattern_manager|      ; 12 (12)             ; 29 (29)                   ; 8192              ; 0          ; 0    ; 0            ; |iot_system_project|pattern_manager:pattern_manager                                                                                                 ; pattern_manager     ; work         ;
+;       |altsyncram:patterns_rtl_0|         ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |iot_system_project|pattern_manager:pattern_manager|altsyncram:patterns_rtl_0                                                                       ; altsyncram          ; work         ;
+;          |altsyncram_8pi1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |iot_system_project|pattern_manager:pattern_manager|altsyncram:patterns_rtl_0|altsyncram_8pi1:auto_generated                                        ; altsyncram_8pi1     ; work         ;
+;    |score_calculator:score_calculator|    ; 28 (28)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |iot_system_project|score_calculator:score_calculator                                                                                               ; score_calculator    ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                        ;
++-----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++-----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; pattern_manager:pattern_manager|altsyncram:patterns_rtl_0|altsyncram_8pi1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 1024         ; 8            ; 1024         ; 8            ; 8192 ; None ;
++-----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration IP Cores Summary                                                                                 ;
+; Analysis & Synthesis IP Cores Summary                                                                                   ;
 +--------+--------------+---------+--------------+--------------+---------------------------------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                       ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+---------------------------------------+-----------------+
 ; Altera ; altera_pll   ; 16.1    ; N/A          ; N/A          ; |iot_system_project|clock10m:clock10m ; clock10m.v      ;
 +--------+--------------+---------+--------------+--------------+---------------------------------------+-----------------+
+
+
++------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                       ;
++-------------------------------------------------+----------------------------------------+
+; Register name                                   ; Reason for Removal                     ;
++-------------------------------------------------+----------------------------------------+
+; nanaseg_decoder:nanaseg_decoder|seg_output[2,5] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2           ;                                        ;
++-------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 98    ;
+; Number of registers using Synchronous Clear  ; 44    ;
+; Number of registers using Synchronous Load   ; 20    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 29    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Registers Added for RAM Pass-Through Logic                                                                 ;
++-----------------------------------------------------------+------------------------------------------------+
+; Register Name                                             ; RAM Name                                       ;
++-----------------------------------------------------------+------------------------------------------------+
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[0]  ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[1]  ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[2]  ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[3]  ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[4]  ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[5]  ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[6]  ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[7]  ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[8]  ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[9]  ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[10] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[11] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[12] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[13] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[14] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[15] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[16] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[17] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[18] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[19] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[20] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[21] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[22] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[23] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[24] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[25] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[26] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[27] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
+; pattern_manager:pattern_manager|patterns_rtl_0_bypass[28] ; pattern_manager:pattern_manager|patterns_rtl_0 ;
++-----------------------------------------------------------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|seg_output[7]      ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |iot_system_project|nanaseg_decoder:nanaseg_decoder|seg_output[3]      ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |iot_system_project|score_calculator:score_calculator|current_score[2] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |iot_system_project|game_clock:game_clock|counter_out                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for pattern_manager:pattern_manager|altsyncram:patterns_rtl_0|altsyncram_8pi1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                ;
++---------------------------------+--------------------+------+---------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                 ;
++---------------------------------+--------------------+------+---------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------+
@@ -328,91 +640,200 @@ agreement for further details.
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                          ; Setting            ; Default Value      ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CSEBA6U23I7S      ;                    ;
-; Top-level entity name                                                           ; iot_system_project ; iot_system_project ;
-; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
-; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
-; Enable compact report table                                                     ; Off                ; Off                ;
-; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
-; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
-; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
-; Preserve fewer node names                                                       ; On                 ; On                 ;
-; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
-; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                        ; Auto               ; Auto               ;
-; Safe State Machine                                                              ; Off                ; Off                ;
-; Extract Verilog State Machines                                                  ; On                 ; On                 ;
-; Extract VHDL State Machines                                                     ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
-; Parallel Synthesis                                                              ; On                 ; On                 ;
-; DSP Block Balancing                                                             ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                              ; On                 ; On                 ;
-; Power-Up Don't Care                                                             ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
-; Remove Duplicate Registers                                                      ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
-; Optimization Technique                                                          ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                              ; 70                 ; 70                 ;
-; Auto Carry Chains                                                               ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
-; Auto ROM Replacement                                                            ; On                 ; On                 ;
-; Auto RAM Replacement                                                            ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
-; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
-; Strict RAM Replacement                                                          ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                           ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
-; Report Parameter Settings                                                       ; On                 ; On                 ;
-; Report Source Assignments                                                       ; On                 ; On                 ;
-; Report Connectivity Checks                                                      ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
-; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
-; HDL message level                                                               ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
-; Clock MUX Protection                                                            ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
-; Block Design Naming                                                             ; Auto               ; Auto               ;
-; SDC constraint protection                                                       ; Off                ; Off                ;
-; Synthesis Effort                                                                ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
-; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
-; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: pattern_manager:pattern_manager|altsyncram:patterns_rtl_0 ;
++------------------------------------+----------------------+------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                           ;
++------------------------------------+----------------------+------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                        ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                        ;
+; WIDTH_A                            ; 8                    ; Untyped                                        ;
+; WIDTHAD_A                          ; 10                   ; Untyped                                        ;
+; NUMWORDS_A                         ; 1024                 ; Untyped                                        ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; WIDTH_B                            ; 8                    ; Untyped                                        ;
+; WIDTHAD_B                          ; 10                   ; Untyped                                        ;
+; NUMWORDS_B                         ; 1024                 ; Untyped                                        ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                        ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                        ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                        ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                        ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                        ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                        ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                        ;
+; CBXI_PARAMETER                     ; altsyncram_8pi1      ; Untyped                                        ;
++------------------------------------+----------------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                   ;
++------------------------+----------------+--------------------------------------------------------+
+; LPM_WIDTHN             ; 11             ; Untyped                                                ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                ;
+; CBXI_PARAMETER         ; lpm_divide_i3m ; Untyped                                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                         ;
++------------------------+----------------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: nanaseg_decoder:nanaseg_decoder|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                   ;
++------------------------+----------------+--------------------------------------------------------+
+; LPM_WIDTHN             ; 11             ; Untyped                                                ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                ;
+; CBXI_PARAMETER         ; lpm_divide_fbm ; Untyped                                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                         ;
++------------------------+----------------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod1 ;
++------------------------+----------------+--------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                   ;
++------------------------+----------------+--------------------------------------------------------+
+; LPM_WIDTHN             ; 11             ; Untyped                                                ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                ;
+; CBXI_PARAMETER         ; lpm_divide_i3m ; Untyped                                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                         ;
++------------------------+----------------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: nanaseg_decoder:nanaseg_decoder|lpm_divide:Div1 ;
++------------------------+----------------+--------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                   ;
++------------------------+----------------+--------------------------------------------------------+
+; LPM_WIDTHN             ; 11             ; Untyped                                                ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                ;
+; CBXI_PARAMETER         ; lpm_divide_ibm ; Untyped                                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                         ;
++------------------------+----------------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod2 ;
++------------------------+----------------+--------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                   ;
++------------------------+----------------+--------------------------------------------------------+
+; LPM_WIDTHN             ; 11             ; Untyped                                                ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                ;
+; CBXI_PARAMETER         ; lpm_divide_i3m ; Untyped                                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                         ;
++------------------------+----------------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                      ;
++-------------------------------------------+-----------------------------------------------------------+
+; Name                                      ; Value                                                     ;
++-------------------------------------------+-----------------------------------------------------------+
+; Number of entity instances                ; 1                                                         ;
+; Entity Instance                           ; pattern_manager:pattern_manager|altsyncram:patterns_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                 ;
+;     -- WIDTH_A                            ; 8                                                         ;
+;     -- NUMWORDS_A                         ; 1024                                                      ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                              ;
+;     -- WIDTH_B                            ; 8                                                         ;
+;     -- NUMWORDS_B                         ; 1024                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                    ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                              ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                      ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                 ;
++-------------------------------------------+-----------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -425,14 +846,59 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 98                          ;
+;     ENA               ; 29                          ;
+;     SCLR              ; 24                          ;
+;     SCLR SLD          ; 20                          ;
+;     plain             ; 25                          ;
+; arriav_lcell_comb     ; 512                         ;
+;     arith             ; 246                         ;
+;         0 data inputs ; 54                          ;
+;         1 data inputs ; 69                          ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 79                          ;
+;         4 data inputs ; 28                          ;
+;     normal            ; 238                         ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 72                          ;
+;         3 data inputs ; 74                          ;
+;         4 data inputs ; 29                          ;
+;         5 data inputs ; 24                          ;
+;         6 data inputs ; 38                          ;
+;     shared            ; 28                          ;
+;         0 data inputs ; 9                           ;
+;         1 data inputs ; 19                          ;
+; boundary_port         ; 69                          ;
+; generic_pll           ; 1                           ;
+; stratixv_ram_block    ; 8                           ;
+;                       ;                             ;
+; Max LUT depth         ; 17.40                       ;
+; Average LUT depth     ; 10.53                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Thu Jul  5 14:28:14 2018
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off iot_system_project -c iot_system_project --analysis_and_elaboration
+    Info: Processing started: Thu Jul 12 17:33:32 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off iot_system_project -c iot_system_project
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file MyPIO.v
@@ -454,7 +920,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file score_c
 Info (12021): Found 1 design units, including 1 entities, in source file 7seg_decoder.v
     Info (12023): Found entity 1: nanaseg_decoder File: /home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v Line: 20
 Info (12127): Elaborating entity "iot_system_project" for the top level hierarchy
-Warning (10034): Output port "led" at iot_system_project.v(11) has no driver File: /home/masashi/2018/univ/IoT/iot-system-project/iot_system_project.v Line: 11
 Info (12128): Elaborating entity "clock10m" for hierarchy "clock10m:clock10m" File: /home/masashi/2018/univ/IoT/iot-system-project/iot_system_project.v Line: 17
 Info (12128): Elaborating entity "clock10m_0002" for hierarchy "clock10m:clock10m|clock10m_0002:clock10m_inst" File: /home/masashi/2018/univ/IoT/iot-system-project/clock10m.v Line: 19
 Info (12128): Elaborating entity "altera_pll" for hierarchy "clock10m:clock10m|clock10m_0002:clock10m_inst|altera_pll:altera_pll_i" File: /home/masashi/2018/univ/IoT/iot-system-project/clock10m/clock10m_0002.v Line: 85
@@ -533,18 +998,111 @@ Warning (10230): Verilog HDL assignment warning at score_calculator.v(21): trunc
 Warning (10230): Verilog HDL assignment warning at score_calculator.v(22): truncated value with size 32 to match size of target (1) File: /home/masashi/2018/univ/IoT/iot-system-project/score_calculator.v Line: 22
 Info (12128): Elaborating entity "nanaseg_decoder" for hierarchy "nanaseg_decoder:nanaseg_decoder" File: /home/masashi/2018/univ/IoT/iot-system-project/iot_system_project.v Line: 22
 Warning (10230): Verilog HDL assignment warning at 7seg_decoder.v(58): truncated value with size 32 to match size of target (2) File: /home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v Line: 58
+Warning (276020): Inferred RAM node "pattern_manager:pattern_manager|patterns_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "pattern_manager:pattern_manager|patterns_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 10
+        Info (286033): Parameter NUMWORDS_A set to 1024
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 10
+        Info (286033): Parameter NUMWORDS_B set to 1024
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Info (278001): Inferred 5 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "nanaseg_decoder:nanaseg_decoder|Mod0" File: /home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v Line: 46
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "nanaseg_decoder:nanaseg_decoder|Div0" File: /home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v Line: 50
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "nanaseg_decoder:nanaseg_decoder|Mod1" File: /home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v Line: 50
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "nanaseg_decoder:nanaseg_decoder|Div1" File: /home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v Line: 54
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "nanaseg_decoder:nanaseg_decoder|Mod2" File: /home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v Line: 54
+Info (12130): Elaborated megafunction instantiation "pattern_manager:pattern_manager|altsyncram:patterns_rtl_0"
+Info (12133): Instantiated megafunction "pattern_manager:pattern_manager|altsyncram:patterns_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "10"
+    Info (12134): Parameter "NUMWORDS_A" = "1024"
+    Info (12134): Parameter "WIDTH_B" = "8"
+    Info (12134): Parameter "WIDTHAD_B" = "10"
+    Info (12134): Parameter "NUMWORDS_B" = "1024"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_8pi1.tdf
+    Info (12023): Found entity 1: altsyncram_8pi1 File: /home/masashi/2018/univ/IoT/iot-system-project/db/altsyncram_8pi1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod0" File: /home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v Line: 46
+Info (12133): Instantiated megafunction "nanaseg_decoder:nanaseg_decoder|lpm_divide:Mod0" with the following parameter: File: /home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v Line: 46
+    Info (12134): Parameter "LPM_WIDTHN" = "11"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_i3m.tdf
+    Info (12023): Found entity 1: lpm_divide_i3m File: /home/masashi/2018/univ/IoT/iot-system-project/db/lpm_divide_i3m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_llh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_llh File: /home/masashi/2018/univ/IoT/iot-system-project/db/sign_div_unsign_llh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_gve.tdf
+    Info (12023): Found entity 1: alt_u_div_gve File: /home/masashi/2018/univ/IoT/iot-system-project/db/alt_u_div_gve.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "nanaseg_decoder:nanaseg_decoder|lpm_divide:Div0" File: /home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v Line: 50
+Info (12133): Instantiated megafunction "nanaseg_decoder:nanaseg_decoder|lpm_divide:Div0" with the following parameter: File: /home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v Line: 50
+    Info (12134): Parameter "LPM_WIDTHN" = "11"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_fbm.tdf
+    Info (12023): Found entity 1: lpm_divide_fbm File: /home/masashi/2018/univ/IoT/iot-system-project/db/lpm_divide_fbm.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "nanaseg_decoder:nanaseg_decoder|lpm_divide:Div1" File: /home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v Line: 54
+Info (12133): Instantiated megafunction "nanaseg_decoder:nanaseg_decoder|lpm_divide:Div1" with the following parameter: File: /home/masashi/2018/univ/IoT/iot-system-project/7seg_decoder.v Line: 54
+    Info (12134): Parameter "LPM_WIDTHN" = "11"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ibm.tdf
+    Info (12023): Found entity 1: lpm_divide_ibm File: /home/masashi/2018/univ/IoT/iot-system-project/db/lpm_divide_ibm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_olh File: /home/masashi/2018/univ/IoT/iot-system-project/db/sign_div_unsign_olh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mve.tdf
+    Info (12023): Found entity 1: alt_u_div_mve File: /home/masashi/2018/univ/IoT/iot-system-project/db/alt_u_div_mve.tdf Line: 23
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "seg_output[2]" is stuck at GND File: /home/masashi/2018/univ/IoT/iot-system-project/iot_system_project.v Line: 9
+    Warning (13410): Pin "seg_output[5]" is stuck at GND File: /home/masashi/2018/univ/IoT/iot-system-project/iot_system_project.v Line: 9
+Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file /home/masashi/2018/univ/IoT/iot-system-project/output_files/iot_system_project.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 1257 megabytes
-    Info: Processing ended: Thu Jul  5 14:28:52 2018
-    Info: Elapsed time: 00:00:38
-    Info: Total CPU time (on all processors): 00:01:15
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Warning: RST port on the PLL is not properly connected on instance clock10m:clock10m|clock10m_0002:clock10m_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: /opt/intelFPGA_lite/16.1/quartus/libraries/megafunctions/altera_pll.v Line: 749
+    Info: Must be connected
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/masashi/2018/univ/IoT/iot-system-project/iot_system_project.v Line: 3
+    Warning (15610): No output dependent on input pin "SWITCH[0]" File: /home/masashi/2018/univ/IoT/iot-system-project/iot_system_project.v Line: 4
+    Warning (15610): No output dependent on input pin "SWITCH[1]" File: /home/masashi/2018/univ/IoT/iot-system-project/iot_system_project.v Line: 4
+    Warning (15610): No output dependent on input pin "SWITCH[2]" File: /home/masashi/2018/univ/IoT/iot-system-project/iot_system_project.v Line: 4
+    Warning (15610): No output dependent on input pin "SWITCH[3]" File: /home/masashi/2018/univ/IoT/iot-system-project/iot_system_project.v Line: 4
+Info (21057): Implemented 642 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 33 input pins
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 564 logic cells
+    Info (21064): Implemented 8 RAM segments
+    Info (21065): Implemented 1 PLLs
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 1057 megabytes
+    Info: Processing ended: Thu Jul 12 17:33:54 2018
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:51
 
 
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
 The suppressed messages can be found in /home/masashi/2018/univ/IoT/iot-system-project/output_files/iot_system_project.map.smsg.
 
 

@@ -1,7 +1,16 @@
 module input_manager (
-  input [9:0] counter10h,
+  input CLOCK50M,
+  input write,
+  input [1:0] address,
   input [7:0] user_input,
-  output [7:0] key_out
+  output reg [7:0] key_out
 );
-  assign key_out = user_input;
+  always @ (posedge CLOCK50M) begin
+    if (write) begin
+      case (address)		
+        2'b00:
+			 key_out <= user_input;
+		endcase
+    end
+  end
 endmodule

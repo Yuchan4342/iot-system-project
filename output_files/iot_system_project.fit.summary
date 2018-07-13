@@ -1,0 +1,20 @@
+Fitter Status : Successful - Thu Jul 12 17:35:42 2018
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Revision Name : iot_system_project
+Top-level Entity Name : iot_system_project
+Family : Cyclone V
+Device : 5CSEBA6U23I7S
+Timing Models : Final
+Logic utilization (in ALMs) : 271 / 41,910 ( < 1 % )
+Total registers : 98
+Total pins : 69 / 314 ( 22 % )
+Total virtual pins : 0
+Total block memory bits : 8,192 / 5,662,720 ( < 1 % )
+Total RAM Blocks : 1 / 553 ( < 1 % )
+Total DSP Blocks : 0 / 112 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1 / 6 ( 17 % )
+Total DLLs : 0 / 4 ( 0 % )
