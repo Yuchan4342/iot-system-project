@@ -157,6 +157,6 @@ module soc_system (
 	output	[7:0]	mypio_0_conduit_end_1_pattern_keys;
 	output	[11:0]	mypio_0_conduit_end_2_seg_output;
 	output	[7:0]	mypio_0_conduit_end_3_user_keys;
-	input	[3:0]	mypio_0_conduit_end_4_switch;
+	input	[4:0]	mypio_0_conduit_end_4_switch;
 	input	[1:0]	mypio_0_conduit_end_5_key;
 endmodule

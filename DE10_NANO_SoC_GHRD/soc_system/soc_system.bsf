@@ -160,8 +160,8 @@ agreement for further details.
 	(port
 		(pt 0 1304)
 		(input)
-		(text "mypio_0_conduit_end_4_switch[3..0]" (rect 0 0 149 12)(font "Arial" (font_size 8)))
-		(text "mypio_0_conduit_end_4_switch[3..0]" (rect 4 1293 208 1304)(font "Arial" (font_size 8)))
+		(text "mypio_0_conduit_end_4_switch[4..0]" (rect 0 0 151 12)(font "Arial" (font_size 8)))
+		(text "mypio_0_conduit_end_4_switch[4..0]" (rect 4 1293 208 1304)(font "Arial" (font_size 8)))
 		(line (pt 0 1304)(pt 272 1304)(line_width 3))
 	)
 	(port

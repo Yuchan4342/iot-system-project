@@ -45,10 +45,10 @@ always @ (posedge clk, posedge reset ) begin
 	 led <= 0;
   end
   else begin
-	  pattern_keys <= pattern_keys_internal;
-	  user_keys <= user_keys_internal;
-	  seg_output <= seg_output_internal;
-	  led <= led_internal;
+	 pattern_keys <= pattern_keys_internal;
+	 user_keys <= user_keys_internal;
+	 seg_output <= seg_output_internal;
+	 led <= led_internal;
   end
 end
 endmodule

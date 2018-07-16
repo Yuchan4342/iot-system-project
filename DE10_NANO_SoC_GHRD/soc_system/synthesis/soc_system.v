@@ -80,7 +80,7 @@ module soc_system (
 		output wire [7:0]  mypio_0_conduit_end_1_pattern_keys,    //          mypio_0_conduit_end_1.pattern_keys
 		output wire [11:0] mypio_0_conduit_end_2_seg_output,      //          mypio_0_conduit_end_2.seg_output
 		output wire [7:0]  mypio_0_conduit_end_3_user_keys,       //          mypio_0_conduit_end_3.user_keys
-		input  wire [3:0]  mypio_0_conduit_end_4_switch,          //          mypio_0_conduit_end_4.switch
+		input  wire [4:0]  mypio_0_conduit_end_4_switch,          //          mypio_0_conduit_end_4.switch
 		input  wire [1:0]  mypio_0_conduit_end_5_key,             //          mypio_0_conduit_end_5.key
 		input  wire        reset_reset_n                          //                          reset.reset_n
 	);

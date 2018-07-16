@@ -10,7 +10,7 @@ module pattern_manager (
   
   always @ (posedge CLOCK50M) begin
     if (write) begin
-      case (address)		
+      case (address)	
         2'b00:
 			 patterns[pattern_with_timestamp[17:8]] <= pattern_with_timestamp[7:0];
 		endcase
