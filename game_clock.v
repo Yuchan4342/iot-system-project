@@ -9,16 +9,14 @@ module game_clock (
   reg [23:0] tenm_counter = 24'h000000;
   always @ (posedge CLOCK10M)
   begin
-    if (SWITCH0 == 1) begin
-		 if (KEY0 == 1) begin
-			counter_out <= 10'b0000000000;
-		 end else begin
-			  tenm_counter = tenm_counter+1;
-		  end
-		 if (tenm_counter == 24'd2000000) begin
-			counter_out <= counter_out+1;
-			tenm_counter = 24'h000000;
-		 end
+	 if (KEY0 == 1) begin
+		counter_out <= 10'b0000000000;
+	 end else begin
+		  tenm_counter = tenm_counter+1;
+	  end
+	 if (tenm_counter == 24'd1000000) begin
+		counter_out <= counter_out+1;
+		tenm_counter = 24'h000000;
 	 end
   end
 endmodule

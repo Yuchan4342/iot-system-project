@@ -38,6 +38,14 @@
          type = "int";
       }
    }
+   element MyPIO_0.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "12288";
+         type = "String";
+      }
+   }
    element button_pio
    {
       datum _sortIndex
@@ -1018,7 +1026,7 @@
    start="mm_bridge_0.m0"
    end="MyPIO_0.avalon_slave_0">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="baseAddress" value="0x3000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1072,7 +1080,7 @@
    start="fpga_only_master.master"
    end="MyPIO_0.avalon_slave_0">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="baseAddress" value="0x3000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection

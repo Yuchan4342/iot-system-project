@@ -134,9 +134,9 @@ module soc_system_mm_interconnect_1_router
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h10 - 64'h0); 
-    localparam PAD1 = log2ceil(64'h1008 - 64'h1000); 
-    localparam PAD2 = log2ceil(64'h2008 - 64'h2000); 
+    localparam PAD0 = log2ceil(64'h1008 - 64'h1000); 
+    localparam PAD1 = log2ceil(64'h2008 - 64'h2000); 
+    localparam PAD2 = log2ceil(64'h3010 - 64'h3000); 
     localparam PAD3 = log2ceil(64'h4010 - 64'h4000); 
     localparam PAD4 = log2ceil(64'h5010 - 64'h5000); 
     localparam PAD5 = log2ceil(64'h30100 - 64'h30000); 
@@ -198,22 +198,22 @@ module soc_system_mm_interconnect_1_router
         // Sets the channel and destination ID based on the address
         // --------------------------------------------------
 
-    // ( 0x0 .. 0x10 )
-    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 18'h0   ) begin
-            src_channel = 6'b000100;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
-    end
-
     // ( 0x1000 .. 0x1008 )
-    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 18'h1000  && read_transaction  ) begin
+    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 18'h1000  && read_transaction  ) begin
             src_channel = 6'b001000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end
 
     // ( 0x2000 .. 0x2008 )
-    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 18'h2000   ) begin
+    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 18'h2000   ) begin
             src_channel = 6'b000001;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
+    end
+
+    // ( 0x3000 .. 0x3010 )
+    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 18'h3000   ) begin
+            src_channel = 6'b000100;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
     end
 
     // ( 0x4000 .. 0x4010 )
