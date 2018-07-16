@@ -1,0 +1,177 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PATTERN_KEYS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PATTERN_KEYS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PATTERN_KEYS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PATTERN_KEYS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PATTERN_KEYS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PATTERN_KEYS[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PATTERN_KEYS[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PATTERN_KEYS[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_OUTPUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_OUTPUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_OUTPUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_OUTPUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_OUTPUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_OUTPUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_OUTPUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_OUTPUT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_OUTPUT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_OUTPUT[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SEG_OUTPUT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "USER_KEYS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "USER_KEYS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "USER_KEYS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "USER_KEYS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "USER_KEYS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "USER_KEYS[5]",
+					"strict" : false
+				},
+				{
+					"name" : "USER_KEYS[6]",
+					"strict" : false
+				},
+				{
+					"name" : "USER_KEYS[7]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_CLK1_50",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
