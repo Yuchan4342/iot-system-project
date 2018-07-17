@@ -21,7 +21,7 @@ module score_calculator (
 	 end else begin
 	    if (write) begin
 		   case (address)
-			  2b00:
+			  2'b00:
 				 if (user_input == current_pattern) begin
 					global_score <= global_score + current_score;
 					current_score <= 3'o0;
@@ -30,7 +30,7 @@ module score_calculator (
 			endcase
 		 end else begin
 		   if (counter10h) begin
-				if (pattern != 0 and pattern != current_pattern) begin
+				if (pattern != 0 & pattern != current_pattern) begin
 				  current_pattern <= pattern;
 				  current_score <= 4'd10;
 				end else begin

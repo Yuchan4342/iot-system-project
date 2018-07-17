@@ -15,7 +15,7 @@ module game_clock (
 		 end else begin
 			  tenm_counter = tenm_counter+1;
 		 end
-		 if (tenm_counter == (24'd2000000 >> SWITCH[2:1]) begin
+		 if (tenm_counter == (24'd2000000 >> SWITCH[2:1])) begin
 			counter_out <= counter_out+1;
 			tenm_counter = 24'h000000;
 		 end
