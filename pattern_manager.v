@@ -5,7 +5,7 @@ module pattern_manager (
   input [17:0] pattern_with_timestamp,
   output [7:0] pattern_out
 );
-  reg [9:0] patterns [1023:0];
+  reg [7:0] patterns [1023:0];
   
   always @ (posedge CLOCK50M) begin
      if(write) begin

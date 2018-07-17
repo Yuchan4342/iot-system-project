@@ -22,7 +22,7 @@ module score_calculator (
 			current_score <= #1 3'o0;
 			current_pattern <= 0;
 		 end else begin
-		   if (pattern == 7'b0000000) begin
+		   if (pattern == 8'b00000000) begin
 			   current_score <= (current_score == 0 ? 0 : current_score - 1);
 			end else begin
 				current_pattern <= pattern;
