@@ -8,7 +8,7 @@ module input_manager (
   always @ (posedge clock100m) begin
      if(write100m) begin
 	     key_out <= user_input;
-		  key_out <= #1 0;
+//		  key_out <= #1 0;
 	  end
   end
   

@@ -9,7 +9,7 @@ module game_clock (
   output reg counter_update,
   output reg write_100m
 );
-  reg [23:0] tenm_counter = 24'h000000;
+  reg [31:0] tenm_counter = 32'h000000;
   reg write_flag = 0;
   
   always @ (posedge CLOCK50M)
@@ -23,11 +23,11 @@ module game_clock (
 		 if (write) begin
 		    write_flag = 1;
 		 end
-		 if (tenm_counter == (24'd400000 >> SWITCH[2:1])) begin
+		 if (tenm_counter == (32'd10000000 >> SWITCH[2:1])) begin
 			counter_out <= counter_out+1;
 			counter_update <= 1;
 			counter_update <= #1 0;
-			tenm_counter = 24'h000000;
+			tenm_counter = 0;
 			if (write_flag) begin
 				write_100m <= 1;
 				write_100m <= #1 0;

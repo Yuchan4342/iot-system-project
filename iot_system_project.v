@@ -17,11 +17,11 @@ module iot_system_project (
   wire [7:0] pattern;
   wire [7:0] user_key;
   wire [10:0] score;
-  game_clock game_clock(clock, ~KEY[0], SWITCH, write, game_timer, clock100m, write100m);
+  game_clock game_clock(CLOCK50M, ~KEY[0], SWITCH, write, game_timer, clock100m, write100m);
   pattern_manager pattern_manager(CLOCK50M, write, game_timer, pattern_with_timestamp, pattern);
   input_manager input_manager(clock100m, write100m, user_input, user_key);
   score_calculator score_calculator(clock100m, write100m, pattern, user_key, ~KEY[1], score, pattern_out);
-  nanaseg_decoder nanaseg_decoder(clock, score, seg_output);
+  nanaseg_decoder nanaseg_decoder(CLOCK50M, score, seg_output);
   assign user_output = user_key;
   assign led = game_timer[7:0];
 endmodule
