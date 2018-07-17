@@ -34,17 +34,12 @@ iot_system_project iot_system_project (
   seg_output,
   led
 );
-always @ (posedge clk, posedge reset ) begin
-  if (reset) begin
-	 seg_output <= 0;
-	 user_keys <= 0;
-	 
-	 led <= 0;
-  end
-  else begin
+always @ (posedge clk) begin
+  begin
 	 if (write) begin
-	   case 2'b00:
-		  writedata_reg <= writedata;
+	   case (address)
+		  2'b00:
+		    writedata_reg <= writedata;
 		endcase
 	 end
   end

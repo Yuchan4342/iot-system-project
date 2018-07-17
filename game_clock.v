@@ -7,10 +7,9 @@ module game_clock (
   input write,
   output reg [9:0] counter_out,
   output reg counter_update,
-  output reg write_100m,
+  output reg write_100m
 );
   reg [23:0] tenm_counter = 24'h000000;
-  reg counter_update = 0;
   reg write_flag = 0;
   
   always @ (posedge CLOCK50M)

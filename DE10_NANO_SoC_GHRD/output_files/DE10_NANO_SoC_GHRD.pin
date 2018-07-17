@@ -297,7 +297,7 @@ PATTERN_KEYS[6]              : AH24      : output : 3.3-V LVTTL       :         
 VCCIO4A                      : AH25      : power  :                   : 3.3V    : 4A        :                
 USER_KEYS[7]                 : AH26      : output : 3.3-V LVTTL       :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH27      :        :                   :         : 4A        :                
-RREF                         : B1        :        :                   :         :           :                
+GND                          : B1        :        :                   :         :           :                
 DNU                          : B2        :        :                   :         :           :                
 GND                          : B3        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B4        :        :                   :         : 7C        :                

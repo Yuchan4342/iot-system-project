@@ -4,119 +4,7 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "PATTERN_KEYS[0]",
-					"strict" : false
-				},
-				{
-					"name" : "PATTERN_KEYS[1]",
-					"strict" : false
-				},
-				{
-					"name" : "PATTERN_KEYS[2]",
-					"strict" : false
-				},
-				{
-					"name" : "PATTERN_KEYS[3]",
-					"strict" : false
-				},
-				{
-					"name" : "PATTERN_KEYS[4]",
-					"strict" : false
-				},
-				{
-					"name" : "PATTERN_KEYS[5]",
-					"strict" : false
-				},
-				{
-					"name" : "PATTERN_KEYS[6]",
-					"strict" : false
-				},
-				{
-					"name" : "PATTERN_KEYS[7]",
-					"strict" : false
-				},
-				{
-					"name" : "SEG_OUTPUT[0]",
-					"strict" : false
-				},
-				{
-					"name" : "SEG_OUTPUT[1]",
-					"strict" : false
-				},
-				{
-					"name" : "SEG_OUTPUT[2]",
-					"strict" : false
-				},
-				{
-					"name" : "SEG_OUTPUT[3]",
-					"strict" : false
-				},
-				{
-					"name" : "SEG_OUTPUT[4]",
-					"strict" : false
-				},
-				{
-					"name" : "SEG_OUTPUT[6]",
-					"strict" : false
-				},
-				{
-					"name" : "SEG_OUTPUT[7]",
-					"strict" : false
-				},
-				{
-					"name" : "SEG_OUTPUT[8]",
-					"strict" : false
-				},
-				{
-					"name" : "SEG_OUTPUT[9]",
-					"strict" : false
-				},
-				{
-					"name" : "SEG_OUTPUT[10]",
-					"strict" : false
-				},
-				{
-					"name" : "SEG_OUTPUT[11]",
-					"strict" : false
-				},
-				{
-					"name" : "USER_KEYS[0]",
-					"strict" : false
-				},
-				{
-					"name" : "USER_KEYS[1]",
-					"strict" : false
-				},
-				{
-					"name" : "USER_KEYS[2]",
-					"strict" : false
-				},
-				{
-					"name" : "USER_KEYS[3]",
-					"strict" : false
-				},
-				{
-					"name" : "USER_KEYS[4]",
-					"strict" : false
-				},
-				{
-					"name" : "USER_KEYS[5]",
-					"strict" : false
-				},
-				{
-					"name" : "USER_KEYS[6]",
-					"strict" : false
-				},
-				{
-					"name" : "USER_KEYS[7]",
-					"strict" : false
-				},
-				{
 					"name" : "FPGA_CLK1_50",
-					"strict" : false
-				},
-				{
-					"name" : "KEY[1]",
 					"strict" : false
 				},
 				{
@@ -137,6 +25,10 @@
 				},
 				{
 					"name" : "KEY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[1]",
 					"strict" : false
 				}
 			]
