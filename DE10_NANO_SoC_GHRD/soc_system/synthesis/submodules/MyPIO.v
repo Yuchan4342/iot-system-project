@@ -20,28 +20,17 @@ module MyPIO (
   output reg [11:0] seg_output,
   output reg [7:0] led
 );
-reg [31:0] writedata_reg;
 
 iot_system_project iot_system_project (
   clk,
-  write,
+  write & (address == 2'b00),
   key,
   switch,
-  writedata_reg[31:15],
-  writedata_reg[7:0],
+  writedata[31:15],
+  writedata[7:0],
   pattern_keys,
   user_keys,
   seg_output,
   led
 );
-always @ (posedge clk) begin
-  begin
-	 if (write) begin
-	   case (address)
-		  2'b00:
-		    writedata_reg <= writedata;
-		endcase
-	 end
-  end
-end
 endmodule

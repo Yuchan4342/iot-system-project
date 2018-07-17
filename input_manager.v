@@ -1,14 +1,13 @@
 module input_manager (
-  input clock100m,
-  input write100m,
+  input CLOCK50M,
+  input write,
   input [7:0] user_input,
   output reg [7:0] key_out
 );
   
-  always @ (posedge clock100m) begin
-     if(write100m) begin
+  always @ (posedge CLOCK50M) begin
+     if(write) begin
 	     key_out <= user_input;
-		  key_out <= #1 0;
 	  end
   end
   

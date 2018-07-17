@@ -6,11 +6,9 @@ module game_clock (
   input [3:0] SWITCH,
   input write,
   output reg [9:0] counter_out,
-  output reg counter_update,
-  output reg write_100m
+  output reg game_clk
 );
   reg [31:0] tenm_counter = 32'h000000;
-  reg write_flag = 0;
   
   always @ (posedge CLOCK50M)
   begin
@@ -18,21 +16,12 @@ module game_clock (
 		 if (KEY0 == 1) begin
 			counter_out <= 10'b0000000000;
 		 end else begin
-			  tenm_counter = tenm_counter+1;
-		 end
-		 if (write) begin
-		    write_flag = 1;
+			tenm_counter = tenm_counter+1;
 		 end
 		 if (tenm_counter == (32'd10000000 >> SWITCH[2:1])) begin
 			counter_out <= counter_out+1;
-			counter_update <= 1;
-			counter_update <= #1 0;
-			tenm_counter = 0;
-			if (write_flag) begin
-				write_100m <= 1;
-				write_100m <= #1 0;
-				write_flag = 0;
-			end
+			game_clk <= 1;
+			game_clk <= #1 0;
 		 end
 	 end
   end
