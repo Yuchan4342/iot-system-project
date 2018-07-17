@@ -1,7 +1,6 @@
 module iot_system_project (
   input CLOCK50M,
   input write,
-  input [1:0] address,
   input [1:0] KEY,
   input [3:0] SWITCH,
   input [17:0] pattern_with_timestamp,
@@ -12,15 +11,17 @@ module iot_system_project (
   output [7:0] led
 );
   wire clock;
-  wire [9:0] counter10h;
+  wire update_input;
+  wire [9:0] game_timer;
+  wire clock100m;
   wire [7:0] pattern;
   wire [7:0] user_key;
   wire [10:0] score;
-  clock10m clock10m(CLOCK50M, ~KEY[0], clock);
-  game_clock game_clock(clock, ~KEY[1], SWITCH, counter10h);
-  pattern_manager pattern_manager(CLOCK50M, write, address, counter10h, pattern_with_timestamp, pattern);
-  input_manager input_manager(CLOCK50M, counter10h, write, address, user_input, user_key);
-  score_calculator score_calculator(CLOCK50M, counter10h, pattern, user_key, write, address, ~KEY[1], score, pattern_out);
+  game_clock game_clock(clock, ~KEY[0], SWITCH, write, game_timer, clock100m, write100m);
+  pattern_manager pattern_manager(CLOCK50M, write, game_timer, pattern_with_timestamp, pattern);
+  input_manager input_manager(clock100m, write100m, user_input, user_key);
+  score_calculator score_calculator(clock100m, write100m, pattern, user_key, ~KEY[1], score, pattern_out);
   nanaseg_decoder nanaseg_decoder(clock, score, seg_output);
   assign user_output = user_key;
+  assign led = game_timer[7:0];
 endmodule
