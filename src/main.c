@@ -10,7 +10,7 @@
 #include "socal/alt_gpio.h"
 #include "../DE10_NANO_SoC_GHRD/hps_0.h"
 
-#define FLASH_NUM 10
+#define FLASH_NUM 30
 #define SLEEP_TIME 1000
 
 #define HW_REGS_BASE (ALT_STM_OFST)
@@ -62,10 +62,10 @@ void sendPattern() {
   int i;
   // ボードに送信するコードはここに
   unsigned int pattern[FLASH_NUM];
-  // 光らせるLEDのパターン(0-256)
-  unsigned int p[FLASH_NUM] = { 1, 2, 4, 8, 16, 32, 64, 128, 256, 255 };
-  // 光らせる時刻(タイムスタンプ)(0-1024)
-  unsigned int timestamp[FLASH_NUM] = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+  // 光らせるLEDのパターン(0-255)
+  unsigned int p[FLASH_NUM] = { 4, 64, 16, 64, 1, 2, 128, 32, 8, 16 };
+  // 光らせる時刻(タイムスタンプ)(0-1023)
+  unsigned int timestamp[FLASH_NUM] = { 50, 100, 150, 200, 250, 300, 350, 400, 450, 500 };
   for (i = 0; i < FLASH_NUM; i++) {
     // パターンは上から11-18bitに代入
     pattern[i] = (timestamp[i] << 22) | (p[i] << 14);
