@@ -1,9 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <termios.h>
 #include <fcntl.h>
 #include <sys/mman.h>
 #include <string.h>
+#include <time.h>
 #include "hwlib.h"
 #include "socal/socal.h"
 #include "socal/hps.h"
@@ -58,6 +60,7 @@ int main(int argc, char* argv[]) {
 
 // 光るタイミングとパターンをボードに送信する
 void sendPattern() {
+  srand(time(NULL));
   printf("Sending pattern when LEDs flash.\n");
   int i;
   // ボードに送信するコードはここに
@@ -68,7 +71,7 @@ void sendPattern() {
   unsigned int timestamp[FLASH_NUM] = { 50, 100, 150, 200, 250, 300, 350, 400, 450, 500 };
   for (i = 0; i < FLASH_NUM; i++) {
     // パターンは上から11-18bitに代入
-    pattern[i] = (timestamp[i] << 22) | (p[i] << 14);
+    pattern[i] = (rand()%1024 << 22) | (rand()%256 << 14);
   }
   for (i = 0; i < FLASH_NUM; i++) {
   	*(uint32_t *)h2p_lw_addr = pattern[i];
