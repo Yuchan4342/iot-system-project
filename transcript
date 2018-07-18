@@ -1,1 +1,60 @@
 # Loading project iot_system_project
+vsim work.game_clock
+# vsim work.game_clock 
+# Start time: 18:19:32 on Jul 17,2018
+# Loading work.game_clock
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ns -endtime 1000ns sim:/game_clock/CLOCK50M
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 1000ns sim:/game_clock/KEY0
+add wave -position insertpoint  \
+sim:/game_clock/counter_out
+add wave -position insertpoint  \
+sim:/game_clock/counter_update
+add wave -position insertpoint  \
+sim:/game_clock/tenm_counter
+wave create -driver freeze -pattern repeater -initialvalue 0 -period 50ps -sequence { 1 0  } -repeat forever -starttime 0ns -endtime 1000ns sim:/game_clock/write
+add wave -position insertpoint  \
+sim:/game_clock/write_100m
+add wave -position insertpoint  \
+sim:/game_clock/write_flag
+run -all
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+wave create -driver freeze -pattern constant -value 0001 -range 3 0 -starttime 0ns -endtime 1000ns sim:/game_clock/SWITCH
+run -all
+wave create -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 1000ns sim:/game_clock/write
+# /game_clock/write already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+wave modify -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 1000ns Edit:/game_clock/write
+wave modify -driver freeze -pattern constant -value 1111 -range 3 0 -starttime 0ns -endtime 1000ns Edit:/game_clock/SWITCH
+run -all
+# 
+# Internal Error: In tclprim_ApplyStimulus for /game_clock/CLOCK50M "Time value must be greater than "now": 1000000 ps
+# ** Error: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]"
+# Internal Error: In tclprim_ApplyStimulus for /game_clock/KEY0 ""
+# Internal Error: In tclprim_ApplyStimulus for /game_clock/write ""
+# Internal Error: In tclprim_ApplyStimulus for /game_clock/SWITCH ""
+quit -sim
+# End time: 18:29:49 on Jul 17,2018, Elapsed time: 0:10:17
+# Errors: 2, Warnings: 1
+vsim work.game_clock
+# vsim work.game_clock 
+# Start time: 18:29:51 on Jul 17,2018
+# Loading work.game_clock
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ns -endtime 1000ns sim:/game_clock/CLOCK50M
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+wave create -driver freeze -pattern constant -value 1111 -range 3 0 -starttime 0ns -endtime 1000ns sim:/game_clock/SWITCH
+add wave -position insertpoint  \
+sim:/game_clock/tenm_counter
+wave create -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 1000ns sim:/game_clock/write
+add wave -position insertpoint  \
+sim:/game_clock/write_100m
+add wave -position insertpoint  \
+sim:/game_clock/write_flag
+add wave -position insertpoint  \
+sim:/game_clock/counter_update
+run -all
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# End time: 07:54:44 on Jul 18,2018, Elapsed time: 13:24:53
+# Errors: 0, Warnings: 1
