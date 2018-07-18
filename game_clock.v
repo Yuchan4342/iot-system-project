@@ -4,7 +4,6 @@ module game_clock (
   input CLOCK50M,
   input KEY0,
   input [3:0] SWITCH,
-  input write,
   output reg [9:0] counter_out,
   output reg game_clk
 );
@@ -15,13 +14,16 @@ module game_clock (
     if (SWITCH[0] == 1) begin
 		 if (KEY0 == 1) begin
 			counter_out <= 10'b0000000000;
+			tenm_counter <= 0;
 		 end else begin
-			tenm_counter = tenm_counter+1;
-		 end
-		 if (tenm_counter == (32'd10000000 >> SWITCH[2:1])) begin
-			counter_out <= counter_out+1;
-			game_clk <= 1;
-			game_clk <= #1 0;
+		 	if (tenm_counter == (32'd10000000 >> SWITCH[2:1])) begin
+			  counter_out <= counter_out+1;
+			  tenm_counter <= 0;
+			  game_clk <= 1;
+		   end else begin
+			  tenm_counter <= tenm_counter+1;
+			  game_clk <= 0;
+		   end
 		 end
 	 end
   end

@@ -10,7 +10,7 @@ module MyPIO (
   input wire write,
 	  // writedata[31:15] pattern_input
 	  // writedata[7:0] user_input
-	  //writedata[*:*] discarded
+	  // writedata[*:*] discarded
   input wire [31:0] writedata,
   
   input wire [1:0] key,
